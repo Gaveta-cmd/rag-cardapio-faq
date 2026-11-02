@@ -87,6 +87,7 @@ def main() -> None:
     ap.add_argument("--conjunto", choices=["dev", "teste"], required=True)
     ap.add_argument("--modo", choices=["vetor", "hibrida"], default="hibrida")
     ap.add_argument("--limite", type=float)
+    ap.add_argument("--sufixo", default="", help="para repetir a medida sem sobrescrever (o LLM varia entre execuções)")
     a = ap.parse_args()
 
     con = conectar()
@@ -110,7 +111,7 @@ def main() -> None:
         if a.limite is None:
             ap.error("--limite é obrigatório na etapa de respostas")
         resultado = avaliar_respostas(perguntas, criar(a.modo), a.limite)
-        arquivo = SAIDA / f"respostas_{a.conjunto}_{a.modo}.json"
+        arquivo = SAIDA / f"respostas_{a.conjunto}_{a.modo}{a.sufixo}.json"
     arquivo.write_text(json.dumps(resultado, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(resultado.get("resumo", resultado), ensure_ascii=False, indent=2))
 

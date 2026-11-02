@@ -1,0 +1,10 @@
+{
+  "n_respondidas": 21,
+  "n_total": 30,
+  "faithfulness": 1.0,
+  "faithfulness_notas_validas": 21,
+  "answer_relevancy": 0.928,
+  "answer_relevancy_notas_validas": 21,
+  "context_precision": 0.8481,
+  "context_precision_notas_validas": 21
+}

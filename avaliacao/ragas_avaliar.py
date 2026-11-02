@@ -7,17 +7,25 @@ Uso: python -m avaliacao.ragas_avaliar --conjunto teste --modo hibrida
 import argparse
 import json
 import re
+import sys
+import types
 from pathlib import Path
 
 from langchain_anthropic import ChatAnthropic
 from langchain_huggingface import HuggingFaceEmbeddings
-from ragas import EvaluationDataset, RunConfig, evaluate
-from ragas.embeddings import LangchainEmbeddingsWrapper
-from ragas.llms import LangchainLLMWrapper
-from ragas.metrics import Faithfulness, LLMContextPrecisionWithoutReference, ResponseRelevancy
 
-from rag.embeddings import MODELO
-from rag.resposta import MODELO_LLM
+# O RAGAS 0.4.3 ainda importa um módulo do Vertex AI que saiu do langchain-community. Este projeto não usa Vertex.
+_vertex = types.ModuleType("langchain_community.chat_models.vertexai")
+_vertex.ChatVertexAI = type("ChatVertexAI", (), {})
+sys.modules.setdefault("langchain_community.chat_models.vertexai", _vertex)
+
+from ragas import EvaluationDataset, RunConfig, evaluate  # noqa: E402
+from ragas.embeddings import LangchainEmbeddingsWrapper  # noqa: E402
+from ragas.llms import LangchainLLMWrapper  # noqa: E402
+from ragas.metrics import Faithfulness, LLMContextPrecisionWithoutReference, ResponseRelevancy  # noqa: E402
+
+from rag.embeddings import MODELO  # noqa: E402
+from rag.resposta import MODELO_LLM  # noqa: E402
 
 SAIDA = Path(__file__).resolve().parent.parent / "outputs" / "resultados"
 
@@ -35,7 +43,7 @@ def main() -> None:
     respostas = json.loads((SAIDA / f"respostas_{a.conjunto}_{a.modo}.json").read_text(encoding="utf-8"))["linhas"]
     respondidas = [x for x in respostas if x["sabe"]]
     dados = EvaluationDataset.from_list([{"user_input": x["pergunta"], "response": sem_citacoes(x["resposta"]), "retrieved_contexts": x["contextos"]} for x in respondidas])
-    llm = LangchainLLMWrapper(ChatAnthropic(model=MODELO_LLM, max_tokens=2000, temperature=0))
+    llm = LangchainLLMWrapper(ChatAnthropic(model=MODELO_LLM, max_tokens=2000), bypass_temperature=True)  # este modelo recusa o parâmetro temperature
     embeddings = LangchainEmbeddingsWrapper(HuggingFaceEmbeddings(model_name=MODELO, encode_kwargs={"normalize_embeddings": True}))
     metricas = [Faithfulness(), ResponseRelevancy(strictness=1), LLMContextPrecisionWithoutReference()]
     tabela = evaluate(dados, metrics=metricas, llm=llm, embeddings=embeddings, run_config=RunConfig(max_workers=4, max_retries=5, timeout=120), show_progress=False).to_pandas()

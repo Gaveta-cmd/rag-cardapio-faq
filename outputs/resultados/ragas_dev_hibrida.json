@@ -1,0 +1,10 @@
+{
+  "n_respondidas": 14,
+  "n_total": 20,
+  "faithfulness": NaN,
+  "faithfulness_notas_validas": 0,
+  "answer_relevancy": NaN,
+  "answer_relevancy_notas_validas": 0,
+  "context_precision": NaN,
+  "context_precision_notas_validas": 0
+}

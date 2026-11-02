@@ -1,0 +1,92 @@
+{
+  "vetor": {
+    "n": 24,
+    "acerto_top_k": 0.9583,
+    "mrr": 0.8011,
+    "erros": [
+      {
+        "id": "t15",
+        "pergunta": "Vem garfo e faca junto?",
+        "fontes": [
+          "alimentacao#talheres-e-descartaveis"
+        ],
+        "trouxe": [
+          "cardapio#porcao-farofa",
+          "alimentacao#gluten",
+          "cardapio#categoria-acompanhamentos",
+          "cardapio#agua-sem-gas",
+          "alimentacao#observacoes-no-pedido",
+          "cardapio#categoria-espetinhos",
+          "funcionamento#onde-estamos",
+          "alimentacao#alergias-e-contaminacao-cruzada"
+        ]
+      }
+    ]
+  },
+  "hibrida": {
+    "n": 24,
+    "acerto_top_k": 0.9583,
+    "mrr": 0.8073,
+    "erros": [
+      {
+        "id": "t05",
+        "pergunta": "Meu pedido já passou de uma hora e meia e nada. O que eu faço?",
+        "fontes": [
+          "trocas#atraso-na-entrega"
+        ],
+        "trouxe": [
+          "trocas#politica-de-troca",
+          "trocas#cancelamento",
+          "trocas#comida-fria-ou-com-problema",
+          "funcionamento#onde-estamos",
+          "funcionamento#ultimo-pedido",
+          "pagamento#nota-fiscal",
+          "entrega#tempo-de-entrega",
+          "alimentacao#pedidos-grandes"
+        ]
+      }
+    ]
+  },
+  "limites": [
+    {
+      "limite": 0.76,
+      "respondiveis_que_passam": 24,
+      "sem_resposta_barradas": 0
+    },
+    {
+      "limite": 0.78,
+      "respondiveis_que_passam": 24,
+      "sem_resposta_barradas": 0
+    },
+    {
+      "limite": 0.8,
+      "respondiveis_que_passam": 24,
+      "sem_resposta_barradas": 0
+    },
+    {
+      "limite": 0.82,
+      "respondiveis_que_passam": 24,
+      "sem_resposta_barradas": 0
+    },
+    {
+      "limite": 0.84,
+      "respondiveis_que_passam": 23,
+      "sem_resposta_barradas": 2
+    },
+    {
+      "limite": 0.86,
+      "respondiveis_que_passam": 19,
+      "sem_resposta_barradas": 3
+    },
+    {
+      "limite": 0.88,
+      "respondiveis_que_passam": 12,
+      "sem_resposta_barradas": 5
+    },
+    {
+      "limite": 0.9,
+      "respondiveis_que_passam": 2,
+      "sem_resposta_barradas": 6
+    }
+  ]
+}
