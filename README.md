@@ -117,7 +117,6 @@ python -m avaliacao.ragas_avaliar --conjunto teste --modo hibrida
 ## Limitações
 
 - **Ainda não há demo online nem instância no Supabase.** O banco testado é Postgres com pgvector no Docker. A migração foi escrita para valer também no Supabase, mas não foi executada lá.
-- **O CI ainda não rodou no GitHub.** Os mesmos comandos passaram localmente, em um ambiente limpo.
 - **A imagem é grande** (3,6 GB), por causa do PyTorch e do modelo de embeddings dentro dela.
 - **Respostas não são determinísticas:** o modelo usado não aceita o parâmetro `temperature`.
 - **O BM25 fica em memória** e é montado quando a API sobe. Isso serve para 49 trechos, não para uma base grande.
