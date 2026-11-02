@@ -1,14 +1,13 @@
 {
   "resumo": {
     "n": 30,
-    "corretas": 26,
-    "respondiveis_corretas": "20/24",
+    "corretas": 28,
+    "respondiveis_corretas": "22/24",
     "recusas_corretas": "6/6",
-    "respondiveis_recusadas": 3,
+    "respondiveis_recusadas": 1,
     "motivos": {
       "llm_nao_sabe": 7,
-      "respondeu": 21,
-      "sem_citacao_valida": 2
+      "respondeu": 23
     }
   },
   "linhas": [
@@ -19,7 +18,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Não. Fechamos no dia 25 de dezembro, assim como nos dias 24 e 31 de dezembro e em 1º de janeiro. [funcionamento#feriados]",
+      "resposta": "Não. Fechamos no dia 25 de dezembro, Natal [funcionamento#feriados].",
       "contextos": [
         "Contato. Os pedidos são feitos pelo WhatsApp (11) 90000-0000. Não atendemos pedidos por ligação telefônica.",
         "Retirada no balcão. Pedidos para retirar ficam prontos em cerca de 25 minutos. Avisamos pelo WhatsApp quando estiverem prontos.",
@@ -52,7 +51,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Sim. A entrega grátis vale só para Centro, Jardim das Flores e Vila Nova. No Morro Azul a taxa é sempre cobrada, e lá custa R$ 12,00 [entrega#entrega-gratis] [entrega#taxas-de-entrega-por-bairro].",
+      "resposta": "Sim. No Morro Azul a taxa de entrega é de R$ 12,00 e é sempre cobrada, mesmo em pedidos acima de R$ 80,00 [entrega#taxas-de-entrega-por-bairro] [entrega#entrega-gratis].",
       "contextos": [
         "Taxas de entrega por bairro. A taxa depende do bairro. Centro: R$ 5,00. Jardim das Flores: R$ 7,00. Vila Nova: R$ 7,00. Parque Industrial: R$ 10,00. Morro Azul: R$ 12,00.",
         "Área de atendimento. Entregamos apenas nos bairros Centro, Jardim das Flores, Vila Nova, Parque Industrial e Morro Azul. Pedidos para outros bairros só podem ser retirados na loja.",
@@ -74,8 +73,8 @@
         "pagamento#formas-de-pagamento"
       ],
       "citadas": [
-        "entrega#entrega-gratis",
-        "entrega#taxas-de-entrega-por-bairro"
+        "entrega#taxas-de-entrega-por-bairro",
+        "entrega#entrega-gratis"
       ],
       "similaridade": 0.8813
     },
@@ -86,7 +85,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Sim, a entrega sai de graça. Pedidos acima de R$ 80,00 (sem contar a taxa) são grátis no Centro [entrega#entrega-gratis].",
+      "resposta": "Sim. A entrega é grátis em pedidos acima de R$ 80,00 no Centro, sem contar a taxa [entrega#entrega-gratis].",
       "contextos": [
         "Entrega grátis. A entrega é grátis em pedidos acima de R$ 80,00, sem contar a taxa, nos bairros Centro, Jardim das Flores e Vila Nova. Nos demais bairros, a taxa é sempre cobrada.",
         "Pedido mínimo. O pedido mínimo para entrega é de R$ 25,00, sem contar a taxa. Na retirada no balcão, não há valor mínimo.",
@@ -119,7 +118,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Não. No Pix, o pagamento é feito antes de o pedido entrar em preparo. A chave é enviada pelo WhatsApp depois da confirmação do pedido, e o comprovante deve ser enviado na mesma conversa [pagamento#pagamento-com-pix].",
+      "resposta": "Não. No Pix, o pagamento é feito antes de o pedido entrar em preparo. A chave é enviada pelo WhatsApp após a confirmação do pedido, e o comprovante deve ser enviado na mesma conversa [pagamento#pagamento-com-pix].\n\nSe preferir pagar na entrega, é possível em dinheiro ou no cartão, pois o entregador leva a maquininha [pagamento#cartao-na-entrega] [pagamento#formas-de-pagamento].",
       "contextos": [
         "Pagamento com Pix. No Pix, o pagamento é feito antes de o pedido entrar em preparo. Enviamos a chave pelo WhatsApp depois de confirmar o pedido, e o cliente manda o comprovante na mesma conversa.",
         "Reembolso. Pagamentos em Pix são devolvidos em até 24 horas. Estornos em cartão seguem o prazo da operadora, de até 2 faturas. Não devolvemos a taxa de entrega se o erro não foi nosso.",
@@ -141,7 +140,9 @@
         "trocas#cancelamento"
       ],
       "citadas": [
-        "pagamento#pagamento-com-pix"
+        "pagamento#pagamento-com-pix",
+        "pagamento#cartao-na-entrega",
+        "pagamento#formas-de-pagamento"
       ],
       "similaridade": 0.8789
     },
@@ -152,7 +153,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": false,
-      "resposta": "Se o pedido passou de 90 minutos, você pode cancelá-lo sem custo ou receber a taxa de entrega de volta como crédito [trocas#atraso-na-entrega].",
+      "resposta": "Como o pedido passou de 90 minutos, você pode cancelá-lo sem custo ou receber a taxa de entrega de volta como crédito [trocas#atraso-na-entrega]. Para isso, entre em contato pelo WhatsApp (11) 90000-0000 [funcionamento#contato].",
       "contextos": [
         "Cancelamento. O pedido pode ser cancelado sem custo até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora.",
         "Contato. Os pedidos são feitos pelo WhatsApp (11) 90000-0000. Não atendemos pedidos por ligação telefônica.",
@@ -174,7 +175,8 @@
         "trocas#comida-fria-ou-com-problema"
       ],
       "citadas": [
-        "trocas#atraso-na-entrega"
+        "trocas#atraso-na-entrega",
+        "funcionamento#contato"
       ],
       "similaridade": 0.8858
     },
@@ -185,7 +187,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Sim, o cupom PRIMEIRA dá 10% de desconto no primeiro pedido, sem contar a taxa de entrega. Ele não vale junto com outras promoções. [pagamento#cupons-e-fidelidade]",
+      "resposta": "O cupom PRIMEIRA dá 10% de desconto no primeiro pedido, sem contar a taxa de entrega, e não vale junto com outras promoções [pagamento#cupons-e-fidelidade].",
       "contextos": [
         "Cupons e fidelidade. Não temos programa de fidelidade. O cupom PRIMEIRA dá 10% de desconto no primeiro pedido, sem contar a taxa de entrega, e não vale junto com outras promoções.",
         "Talheres e descartáveis. Talheres e guardanapos são enviados só se o cliente pedir, para reduzir o desperdício. Não há cobrança.",
@@ -215,10 +217,10 @@
       "id": "t07",
       "pergunta": "A comida chegou gelada, vocês devolvem o dinheiro?",
       "sem_resposta": false,
-      "sabe": false,
-      "motivo": "sem_citacao_valida",
-      "correta": false,
-      "resposta": "Não encontrei essa informação nos documentos do restaurante. Fale com a loja pelo WhatsApp.",
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "Se a comida chegar fria ou com problema, envie uma foto em até 1 hora. Você pode escolher entre refazer o item ou receber crédito no valor dele para o próximo pedido [trocas#comida-fria-ou-com-problema]. Os trechos não citam devolução em dinheiro para esse caso.",
       "contextos": [
         "Comida fria ou com problema. Se a comida chegar fria ou com problema de qualidade, envie uma foto em até 1 hora. O cliente escolhe entre refazer o item ou receber crédito no valor dele para o próximo pedido.",
         "Cancelamento. O pedido pode ser cancelado sem custo até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora.",
@@ -239,7 +241,9 @@
         "funcionamento#onde-estamos",
         "trocas#reembolso"
       ],
-      "citadas": [],
+      "citadas": [
+        "trocas#comida-fria-ou-com-problema"
+      ],
       "similaridade": 0.868
     },
     {
@@ -249,7 +253,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Não dá para incluir o CPF depois que o pedido é fechado. A nota com CPF só é emitida se o cliente pedir no momento do pedido. [pagamento#nota-fiscal]",
+      "resposta": "Não. Depois que o pedido é fechado, não é possível incluir o CPF na nota. O CPF só é colocado quando o cliente pede a nota no momento do pedido [pagamento#nota-fiscal].",
       "contextos": [
         "Nota fiscal. Emitimos nota fiscal com CPF quando o cliente pede no momento do pedido. Depois que o pedido é fechado, não conseguimos incluir o CPF.",
         "Cancelamento. O pedido pode ser cancelado sem custo até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora.",
@@ -282,7 +286,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Temos duas mesas na calçada, sem reserva. [funcionamento#onde-estamos]",
+      "resposta": "Temos só duas mesas na calçada, sem reserva. [funcionamento#onde-estamos]",
       "contextos": [
         "Onde estamos. A loja fica na Rua das Acácias, 120, no bairro Centro. É uma loja de retirada e entrega: temos só duas mesas na calçada, sem reserva.",
         "Acompanhamentos do cardápio, do mais barato para o mais caro: Porção de vinagrete: R$ 5,00; Porção de farofa: R$ 6,00; Pão de alho: R$ 7,00; Porção de arroz: R$ 8,00; Porção de feijão: R$ 9,00; Porção de mandioca frita: R$ 14,00.",
@@ -348,7 +352,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Se ninguém receber o pedido, o entregador espera 10 minutos e volta para a loja. Você pode buscar o pedido na loja até o fechamento, ou pedir uma nova entrega pagando a taxa novamente. [entrega#ausencia-no-endereco]",
+      "resposta": "Se ninguém receber o pedido, o entregador espera 10 minutos e volta para a loja. Você pode buscar o pedido na loja até o fechamento, ou pedir uma nova entrega pagando a taxa outra vez [entrega#ausencia-no-endereco].",
       "contextos": [
         "Cartão na entrega. O entregador leva a maquininha. Parcelamos em até 2 vezes sem juros no crédito em compras acima de R$ 60,00.",
         "Área de atendimento. Entregamos apenas nos bairros Centro, Jardim das Flores, Vila Nova, Parque Industrial e Morro Azul. Pedidos para outros bairros só podem ser retirados na loja.",
@@ -381,7 +385,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Para mais de 30 espetinhos, peça com pelo menos 24 horas de antecedência e pague 50% do valor no Pix [alimentacao#pedidos-grandes]. Não fazemos serviço de churrasqueiro em eventos [alimentacao#pedidos-grandes].",
+      "resposta": "Para mais de 30 espetinhos, peça com pelo menos 24 horas de antecedência, com 50% do valor pago no Pix [alimentacao#pedidos-grandes]. Não fazemos serviço de churrasqueiro em eventos [alimentacao#pedidos-grandes].",
       "contextos": [
         "Pedidos grandes. Para mais de 30 espetinhos, peça com pelo menos 24 horas de antecedência, com 50% do valor pago no Pix. Não fazemos serviço de churrasqueiro em eventos.",
         "Espetinhos do cardápio, do mais barato para o mais caro: Espetinho de frango: R$ 8,00; Espetinho de linguiça: R$ 8,00; Espetinho de carne: R$ 9,00; Espetinho de coração: R$ 9,50; Espetinho de queijo coalho: R$ 10,00; Espetinho de picanha: R$ 16,00.",
@@ -511,7 +515,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "A porção de aipim (mandioca frita) custa R$ 14,00. [cardapio#categoria-acompanhamentos]",
+      "resposta": "A porção de aipim (mandioca frita) custa R$ 14,00 [cardapio#categoria-acompanhamentos].",
       "contextos": [
         "Espetinho de linguiça: R$ 8,00. Linguiça toscana artesanal, levemente apimentada. 130 g. Não é vegetariano. Alérgenos: nenhum na receita.",
         "Porção de arroz: R$ 8,00. Arroz branco soltinho. Serve 2 pessoas. É vegetariano. Alérgenos: nenhum na receita.",
@@ -544,7 +548,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "O refrigerante em lata mais barato é o **Guaraná lata**, por R$ 5,50 [cardapio#guarana-lata]. A Coca-Cola lata custa R$ 6,00 [cardapio#coca-lata].",
+      "resposta": "O refrigerante em lata mais barato é o Guaraná lata, por R$ 5,50 [cardapio#guarana-lata]. A Coca-Cola lata custa R$ 6,00 [cardapio#coca-lata].",
       "contextos": [
         "Bebidas do cardápio, do mais barato para o mais caro: Água sem gás: R$ 3,50; Guaraná lata: R$ 5,50; Coca-Cola lata: R$ 6,00; Suco de laranja: R$ 9,00; Coca-Cola 2L: R$ 14,00.",
         "Coca-Cola lata: R$ 6,00. Lata de 350 ml. É vegetariano. Alérgenos: nenhum na receita.",
@@ -578,7 +582,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "O espetinho mais caro é o de picanha, por R$ 16,00. Ele é feito com picanha em cubos, no ponto da casa até mal passado [cardapio#espetinho-picanha].",
+      "resposta": "O espetinho mais caro é o de picanha, por R$ 16,00. Ele é picanha em cubos, no ponto da casa até mal passado [cardapio#espetinho-picanha].",
       "contextos": [
         "Espetinhos do cardápio, do mais barato para o mais caro: Espetinho de frango: R$ 8,00; Espetinho de linguiça: R$ 8,00; Espetinho de carne: R$ 9,00; Espetinho de coração: R$ 9,50; Espetinho de queijo coalho: R$ 10,00; Espetinho de picanha: R$ 16,00.",
         "Espetinho de coração: R$ 9,50. Coração de frango com alho e salsinha. 120 g. Não é vegetariano. Alérgenos: nenhum na receita.",
@@ -674,10 +678,10 @@
       "id": "t21",
       "pergunta": "Sou intolerante a lactose. Posso comer o espetinho de queijo?",
       "sem_resposta": false,
-      "sabe": false,
-      "motivo": "sem_citacao_valida",
-      "correta": false,
-      "resposta": "Não encontrei essa informação nos documentos do restaurante. Fale com a loja pelo WhatsApp.",
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "O espetinho de queijo coalho contém leite, segundo a lista de alérgenos [cardapio#espetinho-queijo]. Os trechos não informam se o teor de lactose é adequado para quem é intolerante, então não consigo confirmar que você pode comer. Vale perguntar à equipe antes de pedir.\n\nTambém não garantimos ausência de traços de leite, trigo ou carne, porque os espetinhos são feitos na mesma churrasqueira e as porções na mesma cozinha [alimentacao#alergias-e-contaminacao-cruzada].",
       "contextos": [
         "Espetinho de queijo coalho: R$ 10,00. Queijo coalho grelhado, servido com melaço de cana. 100 g. É vegetariano. Alérgenos: leite.",
         "Alergias e contaminação cruzada. Todos os espetinhos são feitos na mesma churrasqueira, e as porções são preparadas na mesma cozinha. Por isso, não garantimos ausência de traços de leite, trigo ou carne. Quem tem alergia grave deve avisar no pedido.",
@@ -698,7 +702,10 @@
         "cardapio#espetinho-linguica",
         "cardapio#espetinho-frango"
       ],
-      "citadas": [],
+      "citadas": [
+        "cardapio#espetinho-queijo",
+        "alimentacao#alergias-e-contaminacao-cruzada"
+      ],
       "similaridade": 0.8839
     },
     {
@@ -708,7 +715,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Sim, o espetinho de linguiça é levemente apimentado, feito com linguiça toscana artesanal [cardapio#espetinho-linguica].",
+      "resposta": "Sim, o espetinho de linguiça é levemente apimentado. A linguiça é toscana artesanal [cardapio#espetinho-linguica].",
       "contextos": [
         "Espetinho de linguiça: R$ 8,00. Linguiça toscana artesanal, levemente apimentada. 130 g. Não é vegetariano. Alérgenos: nenhum na receita.",
         "Espetinhos do cardápio, do mais barato para o mais caro: Espetinho de frango: R$ 8,00; Espetinho de linguiça: R$ 8,00; Espetinho de carne: R$ 9,00; Espetinho de coração: R$ 9,50; Espetinho de queijo coalho: R$ 10,00; Espetinho de picanha: R$ 16,00.",
@@ -774,7 +781,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Não. Os pedidos são feitos pelo WhatsApp (11) 90000-0000, e não atendemos pedidos por ligação telefônica. [funcionamento#contato]",
+      "resposta": "Não. Não atendemos pedidos por ligação telefônica. Os pedidos são feitos pelo WhatsApp (11) 90000-0000. [funcionamento#contato]",
       "contextos": [
         "Contato. Os pedidos são feitos pelo WhatsApp (11) 90000-0000. Não atendemos pedidos por ligação telefônica.",
         "Retirada no balcão. Pedidos para retirar ficam prontos em cerca de 25 minutos. Avisamos pelo WhatsApp quando estiverem prontos.",

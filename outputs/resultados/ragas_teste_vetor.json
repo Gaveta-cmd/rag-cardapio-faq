@@ -1,10 +1,10 @@
 {
-  "n_respondidas": 21,
+  "n_respondidas": 23,
   "n_total": 30,
-  "faithfulness": 1.0,
-  "faithfulness_notas_validas": 21,
-  "answer_relevancy": 0.928,
-  "answer_relevancy_notas_validas": 21,
-  "context_precision": 0.8481,
-  "context_precision_notas_validas": 21
+  "faithfulness": 0.8826,
+  "faithfulness_notas_validas": 23,
+  "answer_relevancy": 0.9283,
+  "answer_relevancy_notas_validas": 23,
+  "context_precision": 0.8413,
+  "context_precision_notas_validas": 22
 }

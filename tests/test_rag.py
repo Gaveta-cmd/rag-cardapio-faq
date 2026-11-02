@@ -1,5 +1,7 @@
 import json
+import sys
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 from fastapi.testclient import TestClient
@@ -7,7 +9,7 @@ from fastapi.testclient import TestClient
 from rag.api import app, obter_buscador, obter_llm, responder_pergunta
 from rag.busca import Buscador, Resultado, fundir_por_posicao, tokenizar
 from rag.documentos import Trecho, carregar_trechos, criar_slug, normalizar
-from rag.resposta import MENSAGEM_NAO_SEI, SINAL_NAO_SEI, montar_mensagem, responder
+from rag.resposta import MENSAGEM_NAO_SEI, SINAL_NAO_SEI, RespostaCortada, chamar_claude, montar_mensagem, responder
 
 RAIZ = Path(__file__).resolve().parent.parent
 TAXAS = Trecho("entrega#taxas", "Taxas", "Centro: R$ 5,00.")
@@ -147,6 +149,22 @@ def test_api_recusa_pergunta_invalida(cliente, pergunta):
 
 def test_saude(cliente):
     assert cliente.get("/saude").json() == {"status": "ok"}
+
+
+def test_resposta_cortada_vira_nao_sei():
+    def cortada(_sistema, _mensagem):
+        raise RespostaCortada
+
+    r = responder("Quanto custa?", [TAXAS], cortada)
+    assert r.sabe is False and r.motivo == "resposta_cortada" and r.texto == MENSAGEM_NAO_SEI
+
+
+def test_limite_de_tokens_levanta_resposta_cortada(monkeypatch):
+    bloco = SimpleNamespace(type="text", text="A taxa é R$ 5,00 [entrega#taxas]")
+    falso = SimpleNamespace(Anthropic=lambda: SimpleNamespace(messages=SimpleNamespace(create=lambda **_: SimpleNamespace(stop_reason="max_tokens", content=[bloco]))))
+    monkeypatch.setitem(sys.modules, "anthropic", falso)
+    with pytest.raises(RespostaCortada):
+        chamar_claude("sistema", "mensagem")
 
 
 def test_pagina_chama_a_api(cliente):

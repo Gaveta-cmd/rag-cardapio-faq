@@ -1,14 +1,13 @@
 {
   "resumo": {
     "n": 20,
-    "corretas": 19,
-    "respondiveis_corretas": "14/15",
+    "corretas": 20,
+    "respondiveis_corretas": "15/15",
     "recusas_corretas": "5/5",
-    "respondiveis_recusadas": 1,
+    "respondiveis_recusadas": 0,
     "motivos": {
       "llm_nao_sabe": 4,
-      "respondeu": 14,
-      "sem_citacao_valida": 1,
+      "respondeu": 15,
       "sem_trecho_relevante": 1
     }
   },
@@ -53,7 +52,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Aos sábados o restaurante fecha à meia-noite, e o último pedido para entrega é aceito 30 minutos antes disso, ou seja, até às 23h30 [funcionamento#horario-de-atendimento] [funcionamento#ultimo-pedido].",
+      "resposta": "No sábado, o último pedido para entrega é aceito até as 23h30, 30 minutos antes do fechamento à meia-noite [funcionamento#ultimo-pedido] [funcionamento#horario-de-atendimento].",
       "contextos": [
         "Tempo de entrega. O tempo médio é de 40 a 60 minutos. Às sextas e aos sábados, pode chegar a 80 minutos.",
         "Ausência no endereço. Se ninguém receber o pedido, o entregador espera 10 minutos e volta para a loja. O cliente pode buscar o pedido até o fechamento, ou pedir nova entrega pagando a taxa outra vez.",
@@ -75,8 +74,8 @@
         "trocas#reembolso"
       ],
       "citadas": [
-        "funcionamento#horario-de-atendimento",
-        "funcionamento#ultimo-pedido"
+        "funcionamento#ultimo-pedido",
+        "funcionamento#horario-de-atendimento"
       ],
       "similaridade": 0.9144
     },
@@ -87,7 +86,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "A entrega no Morro Azul custa R$ 12,00 e não tem entrega grátis, pois a taxa é sempre cobrada nesse bairro [entrega#taxas-de-entrega-por-bairro] [entrega#entrega-gratis].",
+      "resposta": "A taxa de entrega no Morro Azul é de R$ 12,00 [entrega#taxas-de-entrega-por-bairro]. Nesse bairro a taxa é sempre cobrada, mesmo em pedidos acima de R$ 80,00 [entrega#entrega-gratis].",
       "contextos": [
         "Taxas de entrega por bairro. A taxa depende do bairro. Centro: R$ 5,00. Jardim das Flores: R$ 7,00. Vila Nova: R$ 7,00. Parque Industrial: R$ 10,00. Morro Azul: R$ 12,00.",
         "Área de atendimento. Entregamos apenas nos bairros Centro, Jardim das Flores, Vila Nova, Parque Industrial e Morro Azul. Pedidos para outros bairros só podem ser retirados na loja.",
@@ -121,7 +120,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Não entregamos na Vila Mariana. Entregamos apenas nos bairros Centro, Jardim das Flores, Vila Nova, Parque Industrial e Morro Azul. Pedidos para outros bairros só podem ser retirados na loja, na Rua das Acácias, 120, no Centro [entrega#area-de-atendimento] [funcionamento#onde-estamos].",
+      "resposta": "Não entregamos na Vila Mariana. Atendemos somente os bairros Centro, Jardim das Flores, Vila Nova, Parque Industrial e Morro Azul. Pedidos para outros bairros só podem ser retirados na loja, na Rua das Acácias, 120 [entrega#area-de-atendimento] [funcionamento#onde-estamos].",
       "contextos": [
         "Área de atendimento. Entregamos apenas nos bairros Centro, Jardim das Flores, Vila Nova, Parque Industrial e Morro Azul. Pedidos para outros bairros só podem ser retirados na loja.",
         "Entrega grátis. A entrega é grátis em pedidos acima de R$ 80,00, sem contar a taxa, nos bairros Centro, Jardim das Flores e Vila Nova. Nos demais bairros, a taxa é sempre cobrada.",
@@ -155,7 +154,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Não. Não aceitamos vale-refeição (VR). [pagamento#formas-de-pagamento]",
+      "resposta": "Não. Não aceitamos vale-refeição (VR). Aceitamos Pix, dinheiro, cartão de crédito e cartão de débito. [pagamento#formas-de-pagamento]",
       "contextos": [
         "Onde estamos. A loja fica na Rua das Acácias, 120, no bairro Centro. É uma loja de retirada e entrega: temos só duas mesas na calçada, sem reserva.",
         "Retirada no balcão. Pedidos para retirar ficam prontos em cerca de 25 minutos. Avisamos pelo WhatsApp quando estiverem prontos.",
@@ -188,7 +187,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "O espetinho de picanha custa R$ 16,00 e é o item mais caro do cardápio. [cardapio#espetinho-picanha]",
+      "resposta": "O espetinho de picanha custa R$ 16,00 e é o item mais caro do cardápio [cardapio#espetinho-picanha].",
       "contextos": [
         "Espetinho de picanha: R$ 16,00. Picanha em cubos, ponto da casa ao ponto para mal passado. 150 g. É o item mais caro do cardápio. Não é vegetariano. Alérgenos: nenhum na receita.",
         "Espetinhos do cardápio, do mais barato para o mais caro: Espetinho de frango: R$ 8,00; Espetinho de linguiça: R$ 8,00; Espetinho de carne: R$ 9,00; Espetinho de coração: R$ 9,50; Espetinho de queijo coalho: R$ 10,00; Espetinho de picanha: R$ 16,00.",
@@ -221,7 +220,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Sim. O pão de alho leva trigo, então contém glúten [alimentacao#gluten][cardapio#pao-alho].",
+      "resposta": "Sim. O pão de alho leva trigo, que contém glúten [alimentacao#gluten] [cardapio#pao-alho].",
       "contextos": [
         "Glúten. A farofa e o pão de alho levam trigo. Os espetinhos, a mandioca frita, o arroz e o vinagrete não têm trigo na receita, mas podem ter traços pela cozinha compartilhada.",
         "Pão de alho: R$ 7,00. Duas unidades de pão com creme de alho e queijo. É vegetariano. Alérgenos: trigo, leite.",
@@ -255,7 +254,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Não. O pedido pode ser cancelado sem custo só até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora. [trocas#cancelamento]",
+      "resposta": "Não. O pedido pode ser cancelado sem custo só até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora [trocas#cancelamento].",
       "contextos": [
         "Atraso na entrega. Se o pedido passar de 90 minutos, o cliente pode cancelar sem custo ou receber a taxa de entrega de volta como crédito.",
         "Cancelamento. O pedido pode ser cancelado sem custo até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora.",
@@ -288,7 +287,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Não temos prato vegano específico, mas a mandioca frita, o vinagrete e o arroz não levam ingrediente de origem animal [alimentacao#opcoes-vegetarianas]. A cozinha e a churrasqueira são compartilhadas, então não garantimos ausência de traços de leite, trigo ou carne [",
+      "resposta": "Não temos prato vegano específico. Porém, a mandioca frita, o vinagrete e o arroz não levam ingrediente de origem animal [alimentacao#opcoes-vegetarianas].\n\nComo tudo é preparado na mesma cozinha e churrasqueira, não garantimos ausência de traços de leite, trigo ou carne [alimentacao#alergias-e-contaminacao-cruzada].",
       "contextos": [
         "Glúten. A farofa e o pão de alho levam trigo. Os espetinhos, a mandioca frita, o arroz e o vinagrete não têm trigo na receita, mas podem ter traços pela cozinha compartilhada.",
         "Alergias e contaminação cruzada. Todos os espetinhos são feitos na mesma churrasqueira, e as porções são preparadas na mesma cozinha. Por isso, não garantimos ausência de traços de leite, trigo ou carne. Quem tem alergia grave deve avisar no pedido.",
@@ -310,7 +309,8 @@
         "cardapio#porcao-vinagrete"
       ],
       "citadas": [
-        "alimentacao#opcoes-vegetarianas"
+        "alimentacao#opcoes-vegetarianas",
+        "alimentacao#alergias-e-contaminacao-cruzada"
       ],
       "similaridade": 0.9044
     },
@@ -321,7 +321,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Numa sexta à noite, a entrega pode chegar a 80 minutos, pois às sextas e aos sábados o tempo pode chegar a esse valor. O tempo médio geral é de 40 a 60 minutos. [entrega#tempo-de-entrega]",
+      "resposta": "Numa sexta à noite, a entrega pode chegar a 80 minutos. O tempo médio é de 40 a 60 minutos. [entrega#tempo-de-entrega]",
       "contextos": [
         "Tempo de entrega. O tempo médio é de 40 a 60 minutos. Às sextas e aos sábados, pode chegar a 80 minutos.",
         "Ausência no endereço. Se ninguém receber o pedido, o entregador espera 10 minutos e volta para a loja. O cliente pode buscar o pedido até o fechamento, ou pedir nova entrega pagando a taxa outra vez.",
@@ -351,10 +351,10 @@
       "id": "d11",
       "pergunta": "Vou pagar em dinheiro com nota de 200, tem troco?",
       "sem_resposta": false,
-      "sabe": false,
-      "motivo": "sem_citacao_valida",
-      "correta": false,
-      "resposta": "Não encontrei essa informação nos documentos do restaurante. Fale com a loja pelo WhatsApp.",
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "Sim, o entregador leva troco, mas só até R$ 100,00. Então o troco da nota de R$ 200 funciona se o valor do seu pedido for de R$ 100,00 ou mais. Ao fazer o pedido, avise que precisa de troco para R$ 200,00 [pagamento#pagamento-em-dinheiro-e-troco].",
       "contextos": [
         "Pagamento em dinheiro e troco. Em dinheiro, avise no pedido se precisa de troco e para quanto. O entregador leva troco para até R$ 100,00.",
         "Formas de pagamento. Aceitamos Pix, dinheiro, cartão de crédito e cartão de débito. Não aceitamos vale-refeição, vale-alimentação nem cheque.",
@@ -375,7 +375,9 @@
         "cardapio#porcao-feijao",
         "trocas#reembolso"
       ],
-      "citadas": [],
+      "citadas": [
+        "pagamento#pagamento-em-dinheiro-e-troco"
+      ],
       "similaridade": 0.8851
     },
     {
@@ -385,7 +387,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Temos o suco de laranja natural, feito na hora, de 400 ml, por R$ 9,00. Não tem adição de açúcar, é vegetariano e não há alérgenos na receita. [cardapio#suco-laranja]",
+      "resposta": "Temos o suco de laranja natural, feito na hora, de 400 ml, por R$ 9,00. É vegetariano e não tem adição de açúcar. [cardapio#suco-laranja]",
       "contextos": [
         "Suco de laranja: R$ 9,00. Natural, feito na hora, 400 ml. Sem adição de açúcar. É vegetariano. Alérgenos: nenhum na receita.",
         "Bebidas do cardápio, do mais barato para o mais caro: Água sem gás: R$ 3,50; Guaraná lata: R$ 5,50; Coca-Cola lata: R$ 6,00; Suco de laranja: R$ 9,00; Coca-Cola 2L: R$ 14,00.",
@@ -418,7 +420,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Você pode reclamar em até 1 hora depois da entrega, avisando pelo WhatsApp com uma foto. Depois de 1 hora, não conseguimos fazer a troca. [trocas#politica-de-troca]",
+      "resposta": "Você pode avisar em até 1 hora depois da entrega, pelo WhatsApp, com uma foto. Depois disso, não conseguimos fazer a troca. [trocas#politica-de-troca]",
       "contextos": [
         "Retirada no balcão. Pedidos para retirar ficam prontos em cerca de 25 minutos. Avisamos pelo WhatsApp quando estiverem prontos.",
         "Política de troca. Se o pedido vier errado ou faltando item, avise pelo WhatsApp em até 1 hora depois da entrega, com uma foto. Refazemos ou enviamos o item que faltou sem custo. Depois de 1 hora, não conseguimos fazer a troca.",
@@ -484,7 +486,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Sim, no cartão de crédito, em até 2 vezes sem juros, para compras acima de R$ 60,00 [pagamento#cartao-na-entrega]. Não há parcelamento no cartão de débito, já que ele não está entre as opções de parcelamento [pagamento#cartao-na-entrega].",
+      "resposta": "Sim, parcelamos em até 2 vezes sem juros no cartão de crédito, em compras acima de R$ 60,00 [pagamento#cartao-na-entrega].",
       "contextos": [
         "Formas de pagamento. Aceitamos Pix, dinheiro, cartão de crédito e cartão de débito. Não aceitamos vale-refeição, vale-alimentação nem cheque.",
         "Cartão na entrega. O entregador leva a maquininha. Parcelamos em até 2 vezes sem juros no crédito em compras acima de R$ 60,00.",

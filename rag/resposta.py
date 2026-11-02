@@ -10,6 +10,8 @@ from typing import Callable
 from rag.documentos import Trecho
 
 MODELO_LLM = os.environ.get("LLM_MODELO", "claude-haiku-5-5")
+# O Haiku 5.5 pensa antes de responder, e o raciocínio conta no limite: com 400, respostas curtas saíam cortadas
+MAX_TOKENS = 16000
 SINAL_NAO_SEI = "NAO_SEI"
 MENSAGEM_NAO_SEI = "Não encontrei essa informação nos documentos do restaurante. Fale com a loja pelo WhatsApp."
 
@@ -28,7 +30,11 @@ class Resposta:
     texto: str
     fontes: list[Trecho]
     sabe: bool
-    motivo: str  # "respondeu", "sem_trecho_relevante", "llm_nao_sabe" ou "sem_citacao_valida"
+    motivo: str  # "respondeu", "sem_trecho_relevante", "llm_nao_sabe", "sem_citacao_valida" ou "resposta_cortada"
+
+
+class RespostaCortada(Exception):
+    """O LLM bateu no limite de tokens: o texto pode parecer válido e estar incompleto."""
 
 
 def montar_mensagem(pergunta: str, trechos: list[Trecho]) -> str:
@@ -39,7 +45,9 @@ def montar_mensagem(pergunta: str, trechos: list[Trecho]) -> str:
 def chamar_claude(sistema: str, mensagem: str) -> str:
     import anthropic  # importa aqui: os testes usam um LLM falso
 
-    resposta = anthropic.Anthropic().messages.create(model=MODELO_LLM, max_tokens=400, system=sistema, messages=[{"role": "user", "content": mensagem}])
+    resposta = anthropic.Anthropic().messages.create(model=MODELO_LLM, max_tokens=MAX_TOKENS, system=sistema, messages=[{"role": "user", "content": mensagem}])
+    if resposta.stop_reason == "max_tokens":
+        raise RespostaCortada
     return "".join(b.text for b in resposta.content if b.type == "text")
 
 
@@ -48,7 +56,10 @@ def nao_sei(motivo: str) -> Resposta:
 
 
 def responder(pergunta: str, trechos: list[Trecho], chamar_llm: Callable[[str, str], str] = chamar_claude) -> Resposta:
-    texto = chamar_llm(INSTRUCOES, montar_mensagem(pergunta, trechos)).strip()
+    try:
+        texto = chamar_llm(INSTRUCOES, montar_mensagem(pergunta, trechos)).strip()
+    except RespostaCortada:
+        return nao_sei("resposta_cortada")
     if SINAL_NAO_SEI in texto:
         return nao_sei("llm_nao_sabe")
     disponiveis = {t.id: t for t in trechos}

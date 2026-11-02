@@ -1,14 +1,13 @@
 {
   "resumo": {
     "n": 30,
-    "corretas": 27,
-    "respondiveis_corretas": "21/24",
+    "corretas": 29,
+    "respondiveis_corretas": "23/24",
     "recusas_corretas": "6/6",
-    "respondiveis_recusadas": 3,
+    "respondiveis_recusadas": 1,
     "motivos": {
       "llm_nao_sabe": 7,
-      "respondeu": 21,
-      "sem_citacao_valida": 2
+      "respondeu": 23
     }
   },
   "linhas": [
@@ -19,7 +18,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Não. O Espetinho da Esquina fecha no dia 25 de dezembro [funcionamento#feriados].",
+      "resposta": "Não. Fechamos no dia 25 de dezembro, Natal [funcionamento#feriados].",
       "contextos": [
         "Contato. Os pedidos são feitos pelo WhatsApp (11) 90000-0000. Não atendemos pedidos por ligação telefônica.",
         "Retirada no balcão. Pedidos para retirar ficam prontos em cerca de 25 minutos. Avisamos pelo WhatsApp quando estiverem prontos.",
@@ -52,7 +51,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Sim. No Morro Azul a entrega não é grátis, mesmo em pedidos acima de R$ 80,00, e a taxa é de R$ 12,00 [entrega#entrega-gratis] [entrega#taxas-de-entrega-por-bairro].",
+      "resposta": "Sim. Mesmo com pedido acima de R$ 80,00, a entrega no Morro Azul não é grátis, e a taxa é de R$ 12,00 [entrega#entrega-gratis] [entrega#taxas-de-entrega-por-bairro].",
       "contextos": [
         "Taxas de entrega por bairro. A taxa depende do bairro. Centro: R$ 5,00. Jardim das Flores: R$ 7,00. Vila Nova: R$ 7,00. Parque Industrial: R$ 10,00. Morro Azul: R$ 12,00.",
         "Área de atendimento. Entregamos apenas nos bairros Centro, Jardim das Flores, Vila Nova, Parque Industrial e Morro Azul. Pedidos para outros bairros só podem ser retirados na loja.",
@@ -86,7 +85,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Sim. A entrega é grátis em pedidos acima de R$ 80,00, sem contar a taxa, no bairro Centro [entrega#entrega-gratis].",
+      "resposta": "Sim, a entrega sai de graça. O pedido passa de R$ 80,00 (sem contar a taxa) e o bairro Centro está nessa regra [entrega#entrega-gratis].",
       "contextos": [
         "Entrega grátis. A entrega é grátis em pedidos acima de R$ 80,00, sem contar a taxa, nos bairros Centro, Jardim das Flores e Vila Nova. Nos demais bairros, a taxa é sempre cobrada.",
         "Pedido mínimo. O pedido mínimo para entrega é de R$ 25,00, sem contar a taxa. Na retirada no balcão, não há valor mínimo.",
@@ -119,7 +118,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Não. No Pix, o pagamento é feito antes de o pedido entrar em preparo. A chave é enviada pelo WhatsApp depois da confirmação do pedido, e o comprovante é enviado na mesma conversa [pagamento#pagamento-com-pix].",
+      "resposta": "Não. No Pix, o pagamento é feito antes de o pedido entrar em preparo, e a chave é enviada pelo WhatsApp depois da confirmação do pedido [pagamento#pagamento-com-pix].",
       "contextos": [
         "Pagamento com Pix. No Pix, o pagamento é feito antes de o pedido entrar em preparo. Enviamos a chave pelo WhatsApp depois de confirmar o pedido, e o cliente manda o comprovante na mesma conversa.",
         "Reembolso. Pagamentos em Pix são devolvidos em até 24 horas. Estornos em cartão seguem o prazo da operadora, de até 2 faturas. Não devolvemos a taxa de entrega se o erro não foi nosso.",
@@ -152,7 +151,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Se o pedido passou de 90 minutos, você pode cancelar sem custo ou receber a taxa de entrega de volta como crédito [trocas#atraso-na-entrega]. Para cancelar, o pedido precisa ser cancelado antes de entrar em preparo [trocas#cancelamento]. Para falar com a loja, use o WhatsApp (11) 90000-0000, pois não atendemos pedidos por ligação [funcionamento#contato].",
+      "resposta": "Se o pedido passou de 90 minutos, você pode cancelar sem custo ou receber a taxa de entrega de volta como crédito [trocas#atraso-na-entrega]. Para isso, entre em contato pelo WhatsApp (11) 90000-0000 [funcionamento#contato].",
       "contextos": [
         "Cancelamento. O pedido pode ser cancelado sem custo até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora.",
         "Contato. Os pedidos são feitos pelo WhatsApp (11) 90000-0000. Não atendemos pedidos por ligação telefônica.",
@@ -175,7 +174,6 @@
       ],
       "citadas": [
         "trocas#atraso-na-entrega",
-        "trocas#cancelamento",
         "funcionamento#contato"
       ],
       "similaridade": 0.8858
@@ -187,7 +185,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Sim, o cupom PRIMEIRA dá 10% de desconto no primeiro pedido, sem contar a taxa de entrega. Ele não vale junto com outras promoções. [pagamento#cupons-e-fidelidade]",
+      "resposta": "Sim. O cupom PRIMEIRA dá 10% de desconto no primeiro pedido, sem contar a taxa de entrega. Ele não vale junto com outras promoções [pagamento#cupons-e-fidelidade].",
       "contextos": [
         "Cupons e fidelidade. Não temos programa de fidelidade. O cupom PRIMEIRA dá 10% de desconto no primeiro pedido, sem contar a taxa de entrega, e não vale junto com outras promoções.",
         "Talheres e descartáveis. Talheres e guardanapos são enviados só se o cliente pedir, para reduzir o desperdício. Não há cobrança.",
@@ -217,10 +215,10 @@
       "id": "t07",
       "pergunta": "A comida chegou gelada, vocês devolvem o dinheiro?",
       "sem_resposta": false,
-      "sabe": false,
-      "motivo": "sem_citacao_valida",
-      "correta": false,
-      "resposta": "Não encontrei essa informação nos documentos do restaurante. Fale com a loja pelo WhatsApp.",
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "Se a comida chegar fria ou com problema, envie uma foto em até 1 hora. Você pode escolher entre refazer o item ou receber crédito no valor dele para o próximo pedido [trocas#comida-fria-ou-com-problema]. A devolução em dinheiro não está entre essas opções.",
       "contextos": [
         "Comida fria ou com problema. Se a comida chegar fria ou com problema de qualidade, envie uma foto em até 1 hora. O cliente escolhe entre refazer o item ou receber crédito no valor dele para o próximo pedido.",
         "Cancelamento. O pedido pode ser cancelado sem custo até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora.",
@@ -241,7 +239,9 @@
         "funcionamento#onde-estamos",
         "trocas#reembolso"
       ],
-      "citadas": [],
+      "citadas": [
+        "trocas#comida-fria-ou-com-problema"
+      ],
       "similaridade": 0.868
     },
     {
@@ -251,7 +251,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Não. Depois que o pedido é fechado, não conseguimos incluir o CPF. A nota com CPF só é emitida quando o cliente pede no momento do pedido [pagamento#nota-fiscal].",
+      "resposta": "Não dá para incluir o CPF depois que o pedido é fechado. A nota com CPF só é emitida se o cliente pedir no momento do pedido. [pagamento#nota-fiscal]",
       "contextos": [
         "Nota fiscal. Emitimos nota fiscal com CPF quando o cliente pede no momento do pedido. Depois que o pedido é fechado, não conseguimos incluir o CPF.",
         "Cancelamento. O pedido pode ser cancelado sem custo até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora.",
@@ -317,7 +317,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Pedidos para retirar no balcão ficam prontos em cerca de 25 minutos. Avisamos pelo WhatsApp quando estiverem prontos. [entrega#retirada-no-balcao]",
+      "resposta": "Pedidos para retirada no balcão ficam prontos em cerca de 25 minutos. Avisamos pelo WhatsApp quando estiverem prontos. [entrega#retirada-no-balcao]",
       "contextos": [
         "Retirada no balcão. Pedidos para retirar ficam prontos em cerca de 25 minutos. Avisamos pelo WhatsApp quando estiverem prontos.",
         "Tempo de entrega. O tempo médio é de 40 a 60 minutos. Às sextas e aos sábados, pode chegar a 80 minutos.",
@@ -350,7 +350,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Se ninguém receber o pedido, o entregador espera 10 minutos e volta para a loja. Você pode buscar o pedido na loja até o fechamento, ou pedir uma nova entrega, pagando a taxa outra vez. [entrega#ausencia-no-endereco]",
+      "resposta": "Se ninguém receber o pedido, o entregador espera 10 minutos e volta para a loja [entrega#ausencia-no-endereco]. Você pode buscar o pedido na loja até o fechamento, ou pedir uma nova entrega, pagando a taxa de novo [entrega#ausencia-no-endereco].",
       "contextos": [
         "Cartão na entrega. O entregador leva a maquininha. Parcelamos em até 2 vezes sem juros no crédito em compras acima de R$ 60,00.",
         "Área de atendimento. Entregamos apenas nos bairros Centro, Jardim das Flores, Vila Nova, Parque Industrial e Morro Azul. Pedidos para outros bairros só podem ser retirados na loja.",
@@ -383,7 +383,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Para mais de 30 espetinhos, faça o pedido com pelo menos 24 horas de antecedência e pague 50% do valor no Pix [alimentacao#pedidos-grandes]. Não fazemos serviço de churrasqueiro em eventos [alimentacao#pedidos-grandes].",
+      "resposta": "Para mais de 30 espetinhos, como são 40, faça o pedido com pelo menos 24 horas de antecedência e pague 50% do valor no Pix [alimentacao#pedidos-grandes]. Não fazemos serviço de churrasqueiro em eventos [alimentacao#pedidos-grandes].",
       "contextos": [
         "Pedidos grandes. Para mais de 30 espetinhos, peça com pelo menos 24 horas de antecedência, com 50% do valor pago no Pix. Não fazemos serviço de churrasqueiro em eventos.",
         "Espetinhos do cardápio, do mais barato para o mais caro: Espetinho de frango: R$ 8,00; Espetinho de linguiça: R$ 8,00; Espetinho de carne: R$ 9,00; Espetinho de coração: R$ 9,50; Espetinho de queijo coalho: R$ 10,00; Espetinho de picanha: R$ 16,00.",
@@ -416,7 +416,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Não. Não fazemos serviço de churrasqueiro em eventos. [alimentacao#pedidos-grandes]",
+      "resposta": "Não. O restaurante não faz serviço de churrasqueiro em eventos. [alimentacao#pedidos-grandes]",
       "contextos": [
         "Pedidos grandes. Para mais de 30 espetinhos, peça com pelo menos 24 horas de antecedência, com 50% do valor pago no Pix. Não fazemos serviço de churrasqueiro em eventos.",
         "Alergias e contaminação cruzada. Todos os espetinhos são feitos na mesma churrasqueira, e as porções são preparadas na mesma cozinha. Por isso, não garantimos ausência de traços de leite, trigo ou carne. Quem tem alergia grave deve avisar no pedido.",
@@ -449,7 +449,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Sim. Você pode escolher o ponto da carne no pedido: mal passada, ao ponto ou bem passada [alimentacao#observacoes-no-pedido].",
+      "resposta": "Sim, dá para escolher o ponto da carne como mal passada, ao ponto ou bem passada. [alimentacao#observacoes-no-pedido]",
       "contextos": [
         "Observações no pedido. Dá para pedir sem farofa, sem vinagrete, sem cebola e sem pimenta, e escolher o ponto da carne: mal passada, ao ponto ou bem passada. Não fazemos trocas de ingredientes dentro da receita.",
         "Cancelamento. O pedido pode ser cancelado sem custo até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora.",
@@ -646,7 +646,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "A Coca-Cola 2L, a garrafa grande, custa R$ 14,00 [cardapio#coca-2l].",
+      "resposta": "A Coca-Cola 2L custa R$ 14,00 [cardapio#coca-2l].",
       "contextos": [
         "Coca-Cola 2L: R$ 14,00. Garrafa de 2 litros. É vegetariano. Alérgenos: nenhum na receita.",
         "Coca-Cola lata: R$ 6,00. Lata de 350 ml. É vegetariano. Alérgenos: nenhum na receita.",
@@ -676,10 +676,10 @@
       "id": "t21",
       "pergunta": "Sou intolerante a lactose. Posso comer o espetinho de queijo?",
       "sem_resposta": false,
-      "sabe": false,
-      "motivo": "sem_citacao_valida",
-      "correta": false,
-      "resposta": "Não encontrei essa informação nos documentos do restaurante. Fale com a loja pelo WhatsApp.",
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "Não recomendo. O espetinho de queijo coalho contém leite [cardapio#espetinho-queijo], e não há informação de que seja sem lactose. Como a cozinha não garante ausência de traços de leite [alimentacao#alergias-e-contaminacao-cruzada], é melhor avisar a equipe no pedido ou escolher outra opção.",
       "contextos": [
         "Espetinho de queijo coalho: R$ 10,00. Queijo coalho grelhado, servido com melaço de cana. 100 g. É vegetariano. Alérgenos: leite.",
         "Alergias e contaminação cruzada. Todos os espetinhos são feitos na mesma churrasqueira, e as porções são preparadas na mesma cozinha. Por isso, não garantimos ausência de traços de leite, trigo ou carne. Quem tem alergia grave deve avisar no pedido.",
@@ -700,7 +700,10 @@
         "cardapio#espetinho-linguica",
         "cardapio#espetinho-frango"
       ],
-      "citadas": [],
+      "citadas": [
+        "cardapio#espetinho-queijo",
+        "alimentacao#alergias-e-contaminacao-cruzada"
+      ],
       "similaridade": 0.8839
     },
     {
@@ -710,7 +713,7 @@
       "sabe": true,
       "motivo": "respondeu",
       "correta": true,
-      "resposta": "Sim, o espetinho de linguiça é levemente apimentado, feito com linguiça toscana artesanal [cardapio#espetinho-linguica].",
+      "resposta": "Sim, o espetinho de linguiça é levemente apimentado. A linguiça é toscana artesanal [cardapio#espetinho-linguica].",
       "contextos": [
         "Espetinho de linguiça: R$ 8,00. Linguiça toscana artesanal, levemente apimentada. 130 g. Não é vegetariano. Alérgenos: nenhum na receita.",
         "Espetinhos do cardápio, do mais barato para o mais caro: Espetinho de frango: R$ 8,00; Espetinho de linguiça: R$ 8,00; Espetinho de carne: R$ 9,00; Espetinho de coração: R$ 9,50; Espetinho de queijo coalho: R$ 10,00; Espetinho de picanha: R$ 16,00.",
