@@ -18,7 +18,8 @@ class Resultado:
 
 
 def tokenizar(texto: str) -> list[str]:
-    return re.findall(r"[a-z0-9]+", normalizar(texto))
+    """Sem acento e sem plural simples: "segundas" e "segunda" contam como a mesma palavra."""
+    return [re.sub(r"(?<=[a-z]{3})s$", "", t) for t in re.findall(r"[a-z0-9]+", normalizar(texto))]
 
 
 def fundir_por_posicao(*listas: list[str]) -> list[str]:

@@ -2,6 +2,7 @@ line-length = 200
 
 [lint]
 select = ["E", "F", "I", "B", "S"]
+ignore = ["B008"]  # Depends() nos argumentos é o padrão do FastAPI
 
 [lint.per-file-ignores]
 "tests/*" = ["S101"]

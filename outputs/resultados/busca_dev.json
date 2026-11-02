@@ -1,0 +1,56 @@
+{
+  "vetor": {
+    "n": 15,
+    "acerto_top5": 1.0,
+    "mrr": 0.8095,
+    "erros": []
+  },
+  "hibrida": {
+    "n": 15,
+    "acerto_top5": 1.0,
+    "mrr": 0.7333,
+    "erros": []
+  },
+  "limites": [
+    {
+      "limite": 0.76,
+      "respondiveis_que_passam": 15,
+      "sem_resposta_barradas": 0
+    },
+    {
+      "limite": 0.78,
+      "respondiveis_que_passam": 15,
+      "sem_resposta_barradas": 1
+    },
+    {
+      "limite": 0.8,
+      "respondiveis_que_passam": 15,
+      "sem_resposta_barradas": 1
+    },
+    {
+      "limite": 0.82,
+      "respondiveis_que_passam": 14,
+      "sem_resposta_barradas": 1
+    },
+    {
+      "limite": 0.84,
+      "respondiveis_que_passam": 13,
+      "sem_resposta_barradas": 3
+    },
+    {
+      "limite": 0.86,
+      "respondiveis_que_passam": 12,
+      "sem_resposta_barradas": 5
+    },
+    {
+      "limite": 0.88,
+      "respondiveis_que_passam": 10,
+      "sem_resposta_barradas": 5
+    },
+    {
+      "limite": 0.9,
+      "respondiveis_que_passam": 7,
+      "sem_resposta_barradas": 5
+    }
+  ]
+}

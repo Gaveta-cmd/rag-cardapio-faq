@@ -48,7 +48,7 @@ def avaliar_busca(perguntas: list[dict], buscador: Buscador) -> dict:
         inverso += 0 if posicao is None else 1 / (posicao + 1)
         if posicao is None:
             detalhes.append({"id": p["id"], "pergunta": p["pergunta"], "fontes": p["fontes"], "trouxe": [t.id for t in resultado.trechos]})
-    return {"n": len(respondiveis), "acerto_top5": round(acertos / len(respondiveis), 4), "mrr": round(inverso / len(respondiveis), 4), "erros": detalhes, "similaridades": similaridades}
+    return {"n": len(respondiveis), "acerto_top_k": round(acertos / len(respondiveis), 4), "mrr": round(inverso / len(respondiveis), 4), "erros": detalhes, "similaridades": similaridades}
 
 
 def varrer_limites(perguntas: list[dict], similaridades: dict) -> list[dict]:
@@ -71,11 +71,14 @@ def avaliar_respostas(perguntas: list[dict], buscador: Buscador, limite: float) 
         else:
             correta = r.sabe and contem_os_fatos(r.texto, p["deve_conter"])
         linhas.append({"id": p["id"], "pergunta": p["pergunta"], "sem_resposta": bool(p.get("sem_resposta")), "sabe": r.sabe, "motivo": r.motivo, "correta": correta,
-                       "resposta": r.texto, "contextos": [t.texto for t in resultado.trechos], "ids_contexto": [t.id for t in resultado.trechos], "citadas": [f.id for f in r.fontes], "similaridade": round(resultado.similaridade_maxima, 4)})
-    com = [l for l in linhas if not l["sem_resposta"]]
-    sem = [l for l in linhas if l["sem_resposta"]]
-    return {"resumo": {"n": len(linhas), "corretas": sum(l["correta"] for l in linhas), "respondiveis_corretas": f"{sum(l['correta'] for l in com)}/{len(com)}", "recusas_corretas": f"{sum(l['correta'] for l in sem)}/{len(sem)}",
-                       "respondiveis_recusadas": sum(not l["sabe"] for l in com), "motivos": {m: sum(l["motivo"] == m for l in linhas) for m in sorted({l["motivo"] for l in linhas})}}, "linhas": linhas}
+                       "resposta": r.texto, "contextos": [t.texto for t in resultado.trechos], "ids_contexto": [t.id for t in resultado.trechos],
+                       "citadas": [f.id for f in r.fontes], "similaridade": round(resultado.similaridade_maxima, 4)})
+    com = [x for x in linhas if not x["sem_resposta"]]
+    sem = [x for x in linhas if x["sem_resposta"]]
+    motivos = {m: sum(x["motivo"] == m for x in linhas) for m in sorted({x["motivo"] for x in linhas})}
+    resumo = {"n": len(linhas), "corretas": sum(x["correta"] for x in linhas), "respondiveis_corretas": f"{sum(x['correta'] for x in com)}/{len(com)}",
+              "recusas_corretas": f"{sum(x['correta'] for x in sem)}/{len(sem)}", "respondiveis_recusadas": sum(not x["sabe"] for x in com), "motivos": motivos}
+    return {"resumo": resumo, "linhas": linhas}
 
 
 def main() -> None:
@@ -89,7 +92,10 @@ def main() -> None:
     con = conectar()
     trechos = listar_trechos(con)
     embeddings = Embeddings()
-    criar = lambda modo: Buscador(trechos, embeddings.de_pergunta, lambda v, n: buscar_por_vetor(con, v, n), modo)
+
+    def criar(modo: str) -> Buscador:
+        return Buscador(trechos, embeddings.de_pergunta, lambda v, n: buscar_por_vetor(con, v, n), modo)
+
     perguntas = ler_perguntas(a.conjunto)
     SAIDA.mkdir(parents=True, exist_ok=True)
 

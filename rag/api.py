@@ -13,7 +13,7 @@ from pydantic import BaseModel, Field
 from rag import resposta as rsp
 from rag.busca import Buscador, Resultado
 
-TRECHOS_POR_PERGUNTA = 5
+TRECHOS_POR_PERGUNTA = 8
 LIMITE_SIMILARIDADE = float(os.environ.get("LIMITE_SIMILARIDADE", "0.80"))
 
 app = FastAPI(title="Assistente de cardápio e FAQ")

@@ -26,7 +26,7 @@ def salvar_trechos(con: psycopg.Connection, trechos: list[Trecho], vetores: list
     with con.transaction(), con.cursor() as cur:
         cur.execute("delete from trechos")
         cur.executemany("insert into trechos (id, titulo, texto, embedding) values (%s, %s, %s, %s::vector)",
-                        [(t.id, t.titulo, t.texto, str(v)) for t, v in zip(trechos, vetores)])
+                        [(t.id, t.titulo, t.texto, str(v)) for t, v in zip(trechos, vetores, strict=True)])
 
 
 def listar_trechos(con: psycopg.Connection) -> list[Trecho]:

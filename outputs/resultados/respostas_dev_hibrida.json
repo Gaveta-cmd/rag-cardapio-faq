@@ -1,0 +1,669 @@
+{
+  "resumo": {
+    "n": 20,
+    "corretas": 19,
+    "respondiveis_corretas": "14/15",
+    "recusas_corretas": "5/5",
+    "respondiveis_recusadas": 1,
+    "motivos": {
+      "llm_nao_sabe": 4,
+      "respondeu": 14,
+      "sem_citacao_valida": 1,
+      "sem_trecho_relevante": 1
+    }
+  },
+  "linhas": [
+    {
+      "id": "d01",
+      "pergunta": "Vocês abrem na segunda?",
+      "sem_resposta": false,
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "Não. Às segundas-feiras, o Espetinho da Esquina não abre [funcionamento#horario-de-atendimento].",
+      "contextos": [
+        "Onde estamos. A loja fica na Rua das Acácias, 120, no bairro Centro. É uma loja de retirada e entrega: temos só duas mesas na calçada, sem reserva.",
+        "Horário de atendimento. O Espetinho da Esquina abre de terça a domingo, das 18h às 23h30. Às sextas e aos sábados, fica aberto até a meia-noite. Às segundas-feiras, não abrimos.",
+        "Cartão na entrega. O entregador leva a maquininha. Parcelamos em até 2 vezes sem juros no crédito em compras acima de R$ 60,00.",
+        "Cancelamento. O pedido pode ser cancelado sem custo até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora.",
+        "Porção de arroz: R$ 8,00. Arroz branco soltinho. Serve 2 pessoas. É vegetariano. Alérgenos: nenhum na receita.",
+        "Atraso na entrega. Se o pedido passar de 90 minutos, o cliente pode cancelar sem custo ou receber a taxa de entrega de volta como crédito.",
+        "Espetinho de frango: R$ 8,00. Sobrecoxa marinada no limão e na páprica. 150 g. Não é vegetariano. Alérgenos: nenhum na receita.",
+        "Suco de laranja: R$ 9,00. Natural, feito na hora, 400 ml. Sem adição de açúcar. É vegetariano. Alérgenos: nenhum na receita."
+      ],
+      "ids_contexto": [
+        "funcionamento#onde-estamos",
+        "funcionamento#horario-de-atendimento",
+        "pagamento#cartao-na-entrega",
+        "trocas#cancelamento",
+        "cardapio#porcao-arroz",
+        "trocas#atraso-na-entrega",
+        "cardapio#espetinho-frango",
+        "cardapio#suco-laranja"
+      ],
+      "citadas": [
+        "funcionamento#horario-de-atendimento"
+      ],
+      "similaridade": 0.827
+    },
+    {
+      "id": "d02",
+      "pergunta": "Até que horas posso pedir entrega no sábado?",
+      "sem_resposta": false,
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "Aos sábados o restaurante fecha à meia-noite, e o último pedido para entrega é aceito 30 minutos antes disso, ou seja, até às 23h30 [funcionamento#horario-de-atendimento] [funcionamento#ultimo-pedido].",
+      "contextos": [
+        "Tempo de entrega. O tempo médio é de 40 a 60 minutos. Às sextas e aos sábados, pode chegar a 80 minutos.",
+        "Ausência no endereço. Se ninguém receber o pedido, o entregador espera 10 minutos e volta para a loja. O cliente pode buscar o pedido até o fechamento, ou pedir nova entrega pagando a taxa outra vez.",
+        "Último pedido. O último pedido para entrega é aceito 30 minutos antes de fechar. Depois disso, só atendemos retirada no balcão até o horário de fechamento.",
+        "Política de troca. Se o pedido vier errado ou faltando item, avise pelo WhatsApp em até 1 hora depois da entrega, com uma foto. Refazemos ou enviamos o item que faltou sem custo. Depois de 1 hora, não conseguimos fazer a troca.",
+        "Cancelamento. O pedido pode ser cancelado sem custo até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora.",
+        "Horário de atendimento. O Espetinho da Esquina abre de terça a domingo, das 18h às 23h30. Às sextas e aos sábados, fica aberto até a meia-noite. Às segundas-feiras, não abrimos.",
+        "Cartão na entrega. O entregador leva a maquininha. Parcelamos em até 2 vezes sem juros no crédito em compras acima de R$ 60,00.",
+        "Reembolso. Pagamentos em Pix são devolvidos em até 24 horas. Estornos em cartão seguem o prazo da operadora, de até 2 faturas. Não devolvemos a taxa de entrega se o erro não foi nosso."
+      ],
+      "ids_contexto": [
+        "entrega#tempo-de-entrega",
+        "entrega#ausencia-no-endereco",
+        "funcionamento#ultimo-pedido",
+        "trocas#politica-de-troca",
+        "trocas#cancelamento",
+        "funcionamento#horario-de-atendimento",
+        "pagamento#cartao-na-entrega",
+        "trocas#reembolso"
+      ],
+      "citadas": [
+        "funcionamento#horario-de-atendimento",
+        "funcionamento#ultimo-pedido"
+      ],
+      "similaridade": 0.9144
+    },
+    {
+      "id": "d03",
+      "pergunta": "Quanto custa a entrega no Morro Azul?",
+      "sem_resposta": false,
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "A entrega no Morro Azul custa R$ 12,00 e não tem entrega grátis, pois a taxa é sempre cobrada nesse bairro [entrega#taxas-de-entrega-por-bairro] [entrega#entrega-gratis].",
+      "contextos": [
+        "Taxas de entrega por bairro. A taxa depende do bairro. Centro: R$ 5,00. Jardim das Flores: R$ 7,00. Vila Nova: R$ 7,00. Parque Industrial: R$ 10,00. Morro Azul: R$ 12,00.",
+        "Área de atendimento. Entregamos apenas nos bairros Centro, Jardim das Flores, Vila Nova, Parque Industrial e Morro Azul. Pedidos para outros bairros só podem ser retirados na loja.",
+        "Pagamento em dinheiro e troco. Em dinheiro, avise no pedido se precisa de troco e para quanto. O entregador leva troco para até R$ 100,00.",
+        "Pedido mínimo. O pedido mínimo para entrega é de R$ 25,00, sem contar a taxa. Na retirada no balcão, não há valor mínimo.",
+        "Entrega grátis. A entrega é grátis em pedidos acima de R$ 80,00, sem contar a taxa, nos bairros Centro, Jardim das Flores e Vila Nova. Nos demais bairros, a taxa é sempre cobrada.",
+        "Cartão na entrega. O entregador leva a maquininha. Parcelamos em até 2 vezes sem juros no crédito em compras acima de R$ 60,00.",
+        "Onde estamos. A loja fica na Rua das Acácias, 120, no bairro Centro. É uma loja de retirada e entrega: temos só duas mesas na calçada, sem reserva.",
+        "Ausência no endereço. Se ninguém receber o pedido, o entregador espera 10 minutos e volta para a loja. O cliente pode buscar o pedido até o fechamento, ou pedir nova entrega pagando a taxa outra vez."
+      ],
+      "ids_contexto": [
+        "entrega#taxas-de-entrega-por-bairro",
+        "entrega#area-de-atendimento",
+        "pagamento#pagamento-em-dinheiro-e-troco",
+        "entrega#pedido-minimo",
+        "entrega#entrega-gratis",
+        "pagamento#cartao-na-entrega",
+        "funcionamento#onde-estamos",
+        "entrega#ausencia-no-endereco"
+      ],
+      "citadas": [
+        "entrega#taxas-de-entrega-por-bairro",
+        "entrega#entrega-gratis"
+      ],
+      "similaridade": 0.9076
+    },
+    {
+      "id": "d04",
+      "pergunta": "Entregam na Vila Mariana?",
+      "sem_resposta": false,
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "Não entregamos na Vila Mariana. Entregamos apenas nos bairros Centro, Jardim das Flores, Vila Nova, Parque Industrial e Morro Azul. Pedidos para outros bairros só podem ser retirados na loja, na Rua das Acácias, 120, no Centro [entrega#area-de-atendimento] [funcionamento#onde-estamos].",
+      "contextos": [
+        "Área de atendimento. Entregamos apenas nos bairros Centro, Jardim das Flores, Vila Nova, Parque Industrial e Morro Azul. Pedidos para outros bairros só podem ser retirados na loja.",
+        "Entrega grátis. A entrega é grátis em pedidos acima de R$ 80,00, sem contar a taxa, nos bairros Centro, Jardim das Flores e Vila Nova. Nos demais bairros, a taxa é sempre cobrada.",
+        "Taxas de entrega por bairro. A taxa depende do bairro. Centro: R$ 5,00. Jardim das Flores: R$ 7,00. Vila Nova: R$ 7,00. Parque Industrial: R$ 10,00. Morro Azul: R$ 12,00.",
+        "Onde estamos. A loja fica na Rua das Acácias, 120, no bairro Centro. É uma loja de retirada e entrega: temos só duas mesas na calçada, sem reserva.",
+        "Espetinho de frango: R$ 8,00. Sobrecoxa marinada no limão e na páprica. 150 g. Não é vegetariano. Alérgenos: nenhum na receita.",
+        "Cartão na entrega. O entregador leva a maquininha. Parcelamos em até 2 vezes sem juros no crédito em compras acima de R$ 60,00.",
+        "Pedido mínimo. O pedido mínimo para entrega é de R$ 25,00, sem contar a taxa. Na retirada no balcão, não há valor mínimo.",
+        "Cancelamento. O pedido pode ser cancelado sem custo até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora."
+      ],
+      "ids_contexto": [
+        "entrega#area-de-atendimento",
+        "entrega#entrega-gratis",
+        "entrega#taxas-de-entrega-por-bairro",
+        "funcionamento#onde-estamos",
+        "cardapio#espetinho-frango",
+        "pagamento#cartao-na-entrega",
+        "entrega#pedido-minimo",
+        "trocas#cancelamento"
+      ],
+      "citadas": [
+        "entrega#area-de-atendimento",
+        "funcionamento#onde-estamos"
+      ],
+      "similaridade": 0.876
+    },
+    {
+      "id": "d05",
+      "pergunta": "Aceita VR?",
+      "sem_resposta": false,
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "Não. Não aceitamos vale-refeição (VR). [pagamento#formas-de-pagamento]",
+      "contextos": [
+        "Onde estamos. A loja fica na Rua das Acácias, 120, no bairro Centro. É uma loja de retirada e entrega: temos só duas mesas na calçada, sem reserva.",
+        "Retirada no balcão. Pedidos para retirar ficam prontos em cerca de 25 minutos. Avisamos pelo WhatsApp quando estiverem prontos.",
+        "Formas de pagamento. Aceitamos Pix, dinheiro, cartão de crédito e cartão de débito. Não aceitamos vale-refeição, vale-alimentação nem cheque.",
+        "Água sem gás: R$ 3,50. Garrafa de 500 ml. É vegetariano. Alérgenos: nenhum na receita.",
+        "Acompanhamentos do cardápio, do mais barato para o mais caro: Porção de vinagrete: R$ 5,00; Porção de farofa: R$ 6,00; Pão de alho: R$ 7,00; Porção de arroz: R$ 8,00; Porção de feijão: R$ 9,00; Porção de mandioca frita: R$ 14,00.",
+        "Contato. Os pedidos são feitos pelo WhatsApp (11) 90000-0000. Não atendemos pedidos por ligação telefônica.",
+        "Área de atendimento. Entregamos apenas nos bairros Centro, Jardim das Flores, Vila Nova, Parque Industrial e Morro Azul. Pedidos para outros bairros só podem ser retirados na loja.",
+        "Espetinho de linguiça: R$ 8,00. Linguiça toscana artesanal, levemente apimentada. 130 g. Não é vegetariano. Alérgenos: nenhum na receita."
+      ],
+      "ids_contexto": [
+        "funcionamento#onde-estamos",
+        "entrega#retirada-no-balcao",
+        "pagamento#formas-de-pagamento",
+        "cardapio#agua-sem-gas",
+        "cardapio#categoria-acompanhamentos",
+        "funcionamento#contato",
+        "entrega#area-de-atendimento",
+        "cardapio#espetinho-linguica"
+      ],
+      "citadas": [
+        "pagamento#formas-de-pagamento"
+      ],
+      "similaridade": 0.8195
+    },
+    {
+      "id": "d06",
+      "pergunta": "Qual o preço do espeto de picanha?",
+      "sem_resposta": false,
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "O espetinho de picanha custa R$ 16,00 e é o item mais caro do cardápio. [cardapio#espetinho-picanha]",
+      "contextos": [
+        "Espetinho de picanha: R$ 16,00. Picanha em cubos, ponto da casa ao ponto para mal passado. 150 g. É o item mais caro do cardápio. Não é vegetariano. Alérgenos: nenhum na receita.",
+        "Espetinhos do cardápio, do mais barato para o mais caro: Espetinho de frango: R$ 8,00; Espetinho de linguiça: R$ 8,00; Espetinho de carne: R$ 9,00; Espetinho de coração: R$ 9,50; Espetinho de queijo coalho: R$ 10,00; Espetinho de picanha: R$ 16,00.",
+        "Pedidos grandes. Para mais de 30 espetinhos, peça com pelo menos 24 horas de antecedência, com 50% do valor pago no Pix. Não fazemos serviço de churrasqueiro em eventos.",
+        "Acompanhamentos do cardápio, do mais barato para o mais caro: Porção de vinagrete: R$ 5,00; Porção de farofa: R$ 6,00; Pão de alho: R$ 7,00; Porção de arroz: R$ 8,00; Porção de feijão: R$ 9,00; Porção de mandioca frita: R$ 14,00.",
+        "Bebidas do cardápio, do mais barato para o mais caro: Água sem gás: R$ 3,50; Guaraná lata: R$ 5,50; Coca-Cola lata: R$ 6,00; Suco de laranja: R$ 9,00; Coca-Cola 2L: R$ 14,00.",
+        "Espetinho de coração: R$ 9,50. Coração de frango com alho e salsinha. 120 g. Não é vegetariano. Alérgenos: nenhum na receita.",
+        "Taxas de entrega por bairro. A taxa depende do bairro. Centro: R$ 5,00. Jardim das Flores: R$ 7,00. Vila Nova: R$ 7,00. Parque Industrial: R$ 10,00. Morro Azul: R$ 12,00.",
+        "Espetinho de queijo coalho: R$ 10,00. Queijo coalho grelhado, servido com melaço de cana. 100 g. É vegetariano. Alérgenos: leite."
+      ],
+      "ids_contexto": [
+        "cardapio#espetinho-picanha",
+        "cardapio#categoria-espetinhos",
+        "alimentacao#pedidos-grandes",
+        "cardapio#categoria-acompanhamentos",
+        "cardapio#categoria-bebidas",
+        "cardapio#espetinho-coracao",
+        "entrega#taxas-de-entrega-por-bairro",
+        "cardapio#espetinho-queijo"
+      ],
+      "citadas": [
+        "cardapio#espetinho-picanha"
+      ],
+      "similaridade": 0.9251
+    },
+    {
+      "id": "d07",
+      "pergunta": "O pão de alho tem glúten?",
+      "sem_resposta": false,
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "Sim. O pão de alho leva trigo, então contém glúten [alimentacao#gluten][cardapio#pao-alho].",
+      "contextos": [
+        "Glúten. A farofa e o pão de alho levam trigo. Os espetinhos, a mandioca frita, o arroz e o vinagrete não têm trigo na receita, mas podem ter traços pela cozinha compartilhada.",
+        "Pão de alho: R$ 7,00. Duas unidades de pão com creme de alho e queijo. É vegetariano. Alérgenos: trigo, leite.",
+        "Acompanhamentos do cardápio, do mais barato para o mais caro: Porção de vinagrete: R$ 5,00; Porção de farofa: R$ 6,00; Pão de alho: R$ 7,00; Porção de arroz: R$ 8,00; Porção de feijão: R$ 9,00; Porção de mandioca frita: R$ 14,00.",
+        "Espetinho de carne: R$ 9,00. Alcatra em cubos, temperada com sal grosso e alho. 150 g. Não é vegetariano. Alérgenos: nenhum na receita.",
+        "Opções vegetarianas. As opções vegetarianas são o espetinho de queijo coalho, a porção de vinagrete, o pão de alho, a mandioca frita e o arroz. Não temos prato vegano pensado para isso, mas a mandioca frita, o vinagrete e o arroz não levam ingrediente de origem animal.",
+        "Alergias e contaminação cruzada. Todos os espetinhos são feitos na mesma churrasqueira, e as porções são preparadas na mesma cozinha. Por isso, não garantimos ausência de traços de leite, trigo ou carne. Quem tem alergia grave deve avisar no pedido.",
+        "Espetinho de coração: R$ 9,50. Coração de frango com alho e salsinha. 120 g. Não é vegetariano. Alérgenos: nenhum na receita.",
+        "Espetinhos do cardápio, do mais barato para o mais caro: Espetinho de frango: R$ 8,00; Espetinho de linguiça: R$ 8,00; Espetinho de carne: R$ 9,00; Espetinho de coração: R$ 9,50; Espetinho de queijo coalho: R$ 10,00; Espetinho de picanha: R$ 16,00."
+      ],
+      "ids_contexto": [
+        "alimentacao#gluten",
+        "cardapio#pao-alho",
+        "cardapio#categoria-acompanhamentos",
+        "cardapio#espetinho-carne",
+        "alimentacao#opcoes-vegetarianas",
+        "alimentacao#alergias-e-contaminacao-cruzada",
+        "cardapio#espetinho-coracao",
+        "cardapio#categoria-espetinhos"
+      ],
+      "citadas": [
+        "alimentacao#gluten",
+        "cardapio#pao-alho"
+      ],
+      "similaridade": 0.8911
+    },
+    {
+      "id": "d08",
+      "pergunta": "Posso cancelar depois que começaram a preparar?",
+      "sem_resposta": false,
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "Não. O pedido pode ser cancelado sem custo só até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora. [trocas#cancelamento]",
+      "contextos": [
+        "Atraso na entrega. Se o pedido passar de 90 minutos, o cliente pode cancelar sem custo ou receber a taxa de entrega de volta como crédito.",
+        "Cancelamento. O pedido pode ser cancelado sem custo até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora.",
+        "Política de troca. Se o pedido vier errado ou faltando item, avise pelo WhatsApp em até 1 hora depois da entrega, com uma foto. Refazemos ou enviamos o item que faltou sem custo. Depois de 1 hora, não conseguimos fazer a troca.",
+        "Último pedido. O último pedido para entrega é aceito 30 minutos antes de fechar. Depois disso, só atendemos retirada no balcão até o horário de fechamento.",
+        "Feriados. Abrimos em feriados que caem de terça a domingo, no horário normal. Fechamos nos dias 24, 25 e 31 de dezembro e em 1º de janeiro.",
+        "Nota fiscal. Emitimos nota fiscal com CPF quando o cliente pede no momento do pedido. Depois que o pedido é fechado, não conseguimos incluir o CPF.",
+        "Ausência no endereço. Se ninguém receber o pedido, o entregador espera 10 minutos e volta para a loja. O cliente pode buscar o pedido até o fechamento, ou pedir nova entrega pagando a taxa outra vez.",
+        "Tempo de entrega. O tempo médio é de 40 a 60 minutos. Às sextas e aos sábados, pode chegar a 80 minutos."
+      ],
+      "ids_contexto": [
+        "trocas#atraso-na-entrega",
+        "trocas#cancelamento",
+        "trocas#politica-de-troca",
+        "funcionamento#ultimo-pedido",
+        "funcionamento#feriados",
+        "pagamento#nota-fiscal",
+        "entrega#ausencia-no-endereco",
+        "entrega#tempo-de-entrega"
+      ],
+      "citadas": [
+        "trocas#cancelamento"
+      ],
+      "similaridade": 0.9074
+    },
+    {
+      "id": "d09",
+      "pergunta": "Tem opção vegana?",
+      "sem_resposta": false,
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "Não temos prato vegano específico, mas a mandioca frita, o vinagrete e o arroz não levam ingrediente de origem animal [alimentacao#opcoes-vegetarianas]. A cozinha e a churrasqueira são compartilhadas, então não garantimos ausência de traços de leite, trigo ou carne [",
+      "contextos": [
+        "Glúten. A farofa e o pão de alho levam trigo. Os espetinhos, a mandioca frita, o arroz e o vinagrete não têm trigo na receita, mas podem ter traços pela cozinha compartilhada.",
+        "Alergias e contaminação cruzada. Todos os espetinhos são feitos na mesma churrasqueira, e as porções são preparadas na mesma cozinha. Por isso, não garantimos ausência de traços de leite, trigo ou carne. Quem tem alergia grave deve avisar no pedido.",
+        "Opções vegetarianas. As opções vegetarianas são o espetinho de queijo coalho, a porção de vinagrete, o pão de alho, a mandioca frita e o arroz. Não temos prato vegano pensado para isso, mas a mandioca frita, o vinagrete e o arroz não levam ingrediente de origem animal.",
+        "Observações no pedido. Dá para pedir sem farofa, sem vinagrete, sem cebola e sem pimenta, e escolher o ponto da carne: mal passada, ao ponto ou bem passada. Não fazemos trocas de ingredientes dentro da receita.",
+        "Porção de feijão: R$ 9,00. Feijão tropeiro com bacon e linguiça. Serve 2 pessoas. Não é vegetariano. Alérgenos: nenhum na receita.",
+        "Espetinho de carne: R$ 9,00. Alcatra em cubos, temperada com sal grosso e alho. 150 g. Não é vegetariano. Alérgenos: nenhum na receita.",
+        "Porção de farofa: R$ 6,00. Farofa de mandioca com bacon e cebola. Serve 2 pessoas. Não é vegetariano. Alérgenos: trigo.",
+        "Porção de vinagrete: R$ 5,00. Tomate, cebola e pimentão no vinagre. Serve 2 pessoas. É vegetariano. Alérgenos: nenhum na receita."
+      ],
+      "ids_contexto": [
+        "alimentacao#gluten",
+        "alimentacao#alergias-e-contaminacao-cruzada",
+        "alimentacao#opcoes-vegetarianas",
+        "alimentacao#observacoes-no-pedido",
+        "cardapio#porcao-feijao",
+        "cardapio#espetinho-carne",
+        "cardapio#porcao-farofa",
+        "cardapio#porcao-vinagrete"
+      ],
+      "citadas": [
+        "alimentacao#opcoes-vegetarianas"
+      ],
+      "similaridade": 0.9044
+    },
+    {
+      "id": "d10",
+      "pergunta": "Quanto tempo demora a entrega numa sexta à noite?",
+      "sem_resposta": false,
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "Numa sexta à noite, a entrega pode chegar a 80 minutos, pois às sextas e aos sábados o tempo pode chegar a esse valor. O tempo médio geral é de 40 a 60 minutos. [entrega#tempo-de-entrega]",
+      "contextos": [
+        "Tempo de entrega. O tempo médio é de 40 a 60 minutos. Às sextas e aos sábados, pode chegar a 80 minutos.",
+        "Ausência no endereço. Se ninguém receber o pedido, o entregador espera 10 minutos e volta para a loja. O cliente pode buscar o pedido até o fechamento, ou pedir nova entrega pagando a taxa outra vez.",
+        "Atraso na entrega. Se o pedido passar de 90 minutos, o cliente pode cancelar sem custo ou receber a taxa de entrega de volta como crédito.",
+        "Horário de atendimento. O Espetinho da Esquina abre de terça a domingo, das 18h às 23h30. Às sextas e aos sábados, fica aberto até a meia-noite. Às segundas-feiras, não abrimos.",
+        "Cartão na entrega. O entregador leva a maquininha. Parcelamos em até 2 vezes sem juros no crédito em compras acima de R$ 60,00.",
+        "Entrega grátis. A entrega é grátis em pedidos acima de R$ 80,00, sem contar a taxa, nos bairros Centro, Jardim das Flores e Vila Nova. Nos demais bairros, a taxa é sempre cobrada.",
+        "Pedido mínimo. O pedido mínimo para entrega é de R$ 25,00, sem contar a taxa. Na retirada no balcão, não há valor mínimo.",
+        "Último pedido. O último pedido para entrega é aceito 30 minutos antes de fechar. Depois disso, só atendemos retirada no balcão até o horário de fechamento."
+      ],
+      "ids_contexto": [
+        "entrega#tempo-de-entrega",
+        "entrega#ausencia-no-endereco",
+        "trocas#atraso-na-entrega",
+        "funcionamento#horario-de-atendimento",
+        "pagamento#cartao-na-entrega",
+        "entrega#entrega-gratis",
+        "entrega#pedido-minimo",
+        "funcionamento#ultimo-pedido"
+      ],
+      "citadas": [
+        "entrega#tempo-de-entrega"
+      ],
+      "similaridade": 0.9147
+    },
+    {
+      "id": "d11",
+      "pergunta": "Vou pagar em dinheiro com nota de 200, tem troco?",
+      "sem_resposta": false,
+      "sabe": false,
+      "motivo": "sem_citacao_valida",
+      "correta": false,
+      "resposta": "Não encontrei essa informação nos documentos do restaurante. Fale com a loja pelo WhatsApp.",
+      "contextos": [
+        "Pagamento em dinheiro e troco. Em dinheiro, avise no pedido se precisa de troco e para quanto. O entregador leva troco para até R$ 100,00.",
+        "Formas de pagamento. Aceitamos Pix, dinheiro, cartão de crédito e cartão de débito. Não aceitamos vale-refeição, vale-alimentação nem cheque.",
+        "Nota fiscal. Emitimos nota fiscal com CPF quando o cliente pede no momento do pedido. Depois que o pedido é fechado, não conseguimos incluir o CPF.",
+        "Cartão na entrega. O entregador leva a maquininha. Parcelamos em até 2 vezes sem juros no crédito em compras acima de R$ 60,00.",
+        "Pagamento com Pix. No Pix, o pagamento é feito antes de o pedido entrar em preparo. Enviamos a chave pelo WhatsApp depois de confirmar o pedido, e o cliente manda o comprovante na mesma conversa.",
+        "Política de troca. Se o pedido vier errado ou faltando item, avise pelo WhatsApp em até 1 hora depois da entrega, com uma foto. Refazemos ou enviamos o item que faltou sem custo. Depois de 1 hora, não conseguimos fazer a troca.",
+        "Porção de feijão: R$ 9,00. Feijão tropeiro com bacon e linguiça. Serve 2 pessoas. Não é vegetariano. Alérgenos: nenhum na receita.",
+        "Reembolso. Pagamentos em Pix são devolvidos em até 24 horas. Estornos em cartão seguem o prazo da operadora, de até 2 faturas. Não devolvemos a taxa de entrega se o erro não foi nosso."
+      ],
+      "ids_contexto": [
+        "pagamento#pagamento-em-dinheiro-e-troco",
+        "pagamento#formas-de-pagamento",
+        "pagamento#nota-fiscal",
+        "pagamento#cartao-na-entrega",
+        "pagamento#pagamento-com-pix",
+        "trocas#politica-de-troca",
+        "cardapio#porcao-feijao",
+        "trocas#reembolso"
+      ],
+      "citadas": [],
+      "similaridade": 0.8851
+    },
+    {
+      "id": "d12",
+      "pergunta": "Qual o suco que vocês têm?",
+      "sem_resposta": false,
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "Temos o suco de laranja natural, feito na hora, de 400 ml, por R$ 9,00. Não tem adição de açúcar, é vegetariano e não há alérgenos na receita. [cardapio#suco-laranja]",
+      "contextos": [
+        "Suco de laranja: R$ 9,00. Natural, feito na hora, 400 ml. Sem adição de açúcar. É vegetariano. Alérgenos: nenhum na receita.",
+        "Bebidas do cardápio, do mais barato para o mais caro: Água sem gás: R$ 3,50; Guaraná lata: R$ 5,50; Coca-Cola lata: R$ 6,00; Suco de laranja: R$ 9,00; Coca-Cola 2L: R$ 14,00.",
+        "Glúten. A farofa e o pão de alho levam trigo. Os espetinhos, a mandioca frita, o arroz e o vinagrete não têm trigo na receita, mas podem ter traços pela cozinha compartilhada.",
+        "Alergias e contaminação cruzada. Todos os espetinhos são feitos na mesma churrasqueira, e as porções são preparadas na mesma cozinha. Por isso, não garantimos ausência de traços de leite, trigo ou carne. Quem tem alergia grave deve avisar no pedido.",
+        "Talheres e descartáveis. Talheres e guardanapos são enviados só se o cliente pedir, para reduzir o desperdício. Não há cobrança.",
+        "Cartão na entrega. O entregador leva a maquininha. Parcelamos em até 2 vezes sem juros no crédito em compras acima de R$ 60,00.",
+        "Coca-Cola 2L: R$ 14,00. Garrafa de 2 litros. É vegetariano. Alérgenos: nenhum na receita.",
+        "Nota fiscal. Emitimos nota fiscal com CPF quando o cliente pede no momento do pedido. Depois que o pedido é fechado, não conseguimos incluir o CPF."
+      ],
+      "ids_contexto": [
+        "cardapio#suco-laranja",
+        "cardapio#categoria-bebidas",
+        "alimentacao#gluten",
+        "alimentacao#alergias-e-contaminacao-cruzada",
+        "alimentacao#talheres-e-descartaveis",
+        "pagamento#cartao-na-entrega",
+        "cardapio#coca-2l",
+        "pagamento#nota-fiscal"
+      ],
+      "citadas": [
+        "cardapio#suco-laranja"
+      ],
+      "similaridade": 0.8542
+    },
+    {
+      "id": "d13",
+      "pergunta": "Meu pedido veio errado. Até quando posso reclamar?",
+      "sem_resposta": false,
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "Você pode reclamar em até 1 hora depois da entrega, avisando pelo WhatsApp com uma foto. Depois de 1 hora, não conseguimos fazer a troca. [trocas#politica-de-troca]",
+      "contextos": [
+        "Retirada no balcão. Pedidos para retirar ficam prontos em cerca de 25 minutos. Avisamos pelo WhatsApp quando estiverem prontos.",
+        "Política de troca. Se o pedido vier errado ou faltando item, avise pelo WhatsApp em até 1 hora depois da entrega, com uma foto. Refazemos ou enviamos o item que faltou sem custo. Depois de 1 hora, não conseguimos fazer a troca.",
+        "Cancelamento. O pedido pode ser cancelado sem custo até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora.",
+        "Último pedido. O último pedido para entrega é aceito 30 minutos antes de fechar. Depois disso, só atendemos retirada no balcão até o horário de fechamento.",
+        "Ausência no endereço. Se ninguém receber o pedido, o entregador espera 10 minutos e volta para a loja. O cliente pode buscar o pedido até o fechamento, ou pedir nova entrega pagando a taxa outra vez.",
+        "Contato. Os pedidos são feitos pelo WhatsApp (11) 90000-0000. Não atendemos pedidos por ligação telefônica.",
+        "Comida fria ou com problema. Se a comida chegar fria ou com problema de qualidade, envie uma foto em até 1 hora. O cliente escolhe entre refazer o item ou receber crédito no valor dele para o próximo pedido.",
+        "Atraso na entrega. Se o pedido passar de 90 minutos, o cliente pode cancelar sem custo ou receber a taxa de entrega de volta como crédito."
+      ],
+      "ids_contexto": [
+        "entrega#retirada-no-balcao",
+        "trocas#politica-de-troca",
+        "trocas#cancelamento",
+        "funcionamento#ultimo-pedido",
+        "entrega#ausencia-no-endereco",
+        "funcionamento#contato",
+        "trocas#comida-fria-ou-com-problema",
+        "trocas#atraso-na-entrega"
+      ],
+      "citadas": [
+        "trocas#politica-de-troca"
+      ],
+      "similaridade": 0.8759
+    },
+    {
+      "id": "d14",
+      "pergunta": "Qual o valor mínimo pra pedir delivery?",
+      "sem_resposta": false,
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "O pedido mínimo para entrega é de R$ 25,00, sem contar a taxa [entrega#pedido-minimo]. Na retirada no balcão não há valor mínimo [entrega#pedido-minimo].",
+      "contextos": [
+        "Pedido mínimo. O pedido mínimo para entrega é de R$ 25,00, sem contar a taxa. Na retirada no balcão, não há valor mínimo.",
+        "Ausência no endereço. Se ninguém receber o pedido, o entregador espera 10 minutos e volta para a loja. O cliente pode buscar o pedido até o fechamento, ou pedir nova entrega pagando a taxa outra vez.",
+        "Comida fria ou com problema. Se a comida chegar fria ou com problema de qualidade, envie uma foto em até 1 hora. O cliente escolhe entre refazer o item ou receber crédito no valor dele para o próximo pedido.",
+        "Talheres e descartáveis. Talheres e guardanapos são enviados só se o cliente pedir, para reduzir o desperdício. Não há cobrança.",
+        "Pagamento em dinheiro e troco. Em dinheiro, avise no pedido se precisa de troco e para quanto. O entregador leva troco para até R$ 100,00.",
+        "Cartão na entrega. O entregador leva a maquininha. Parcelamos em até 2 vezes sem juros no crédito em compras acima de R$ 60,00.",
+        "Tempo de entrega. O tempo médio é de 40 a 60 minutos. Às sextas e aos sábados, pode chegar a 80 minutos.",
+        "Último pedido. O último pedido para entrega é aceito 30 minutos antes de fechar. Depois disso, só atendemos retirada no balcão até o horário de fechamento."
+      ],
+      "ids_contexto": [
+        "entrega#pedido-minimo",
+        "entrega#ausencia-no-endereco",
+        "trocas#comida-fria-ou-com-problema",
+        "alimentacao#talheres-e-descartaveis",
+        "pagamento#pagamento-em-dinheiro-e-troco",
+        "pagamento#cartao-na-entrega",
+        "entrega#tempo-de-entrega",
+        "funcionamento#ultimo-pedido"
+      ],
+      "citadas": [
+        "entrega#pedido-minimo"
+      ],
+      "similaridade": 0.9164
+    },
+    {
+      "id": "d15",
+      "pergunta": "Dá pra parcelar no cartão?",
+      "sem_resposta": false,
+      "sabe": true,
+      "motivo": "respondeu",
+      "correta": true,
+      "resposta": "Sim, no cartão de crédito, em até 2 vezes sem juros, para compras acima de R$ 60,00 [pagamento#cartao-na-entrega]. Não há parcelamento no cartão de débito, já que ele não está entre as opções de parcelamento [pagamento#cartao-na-entrega].",
+      "contextos": [
+        "Formas de pagamento. Aceitamos Pix, dinheiro, cartão de crédito e cartão de débito. Não aceitamos vale-refeição, vale-alimentação nem cheque.",
+        "Cartão na entrega. O entregador leva a maquininha. Parcelamos em até 2 vezes sem juros no crédito em compras acima de R$ 60,00.",
+        "Reembolso. Pagamentos em Pix são devolvidos em até 24 horas. Estornos em cartão seguem o prazo da operadora, de até 2 faturas. Não devolvemos a taxa de entrega se o erro não foi nosso.",
+        "Cupons e fidelidade. Não temos programa de fidelidade. O cupom PRIMEIRA dá 10% de desconto no primeiro pedido, sem contar a taxa de entrega, e não vale junto com outras promoções.",
+        "Pedido mínimo. O pedido mínimo para entrega é de R$ 25,00, sem contar a taxa. Na retirada no balcão, não há valor mínimo.",
+        "Pagamento em dinheiro e troco. Em dinheiro, avise no pedido se precisa de troco e para quanto. O entregador leva troco para até R$ 100,00.",
+        "Retirada no balcão. Pedidos para retirar ficam prontos em cerca de 25 minutos. Avisamos pelo WhatsApp quando estiverem prontos.",
+        "Política de troca. Se o pedido vier errado ou faltando item, avise pelo WhatsApp em até 1 hora depois da entrega, com uma foto. Refazemos ou enviamos o item que faltou sem custo. Depois de 1 hora, não conseguimos fazer a troca."
+      ],
+      "ids_contexto": [
+        "pagamento#formas-de-pagamento",
+        "pagamento#cartao-na-entrega",
+        "trocas#reembolso",
+        "pagamento#cupons-e-fidelidade",
+        "entrega#pedido-minimo",
+        "pagamento#pagamento-em-dinheiro-e-troco",
+        "entrega#retirada-no-balcao",
+        "trocas#politica-de-troca"
+      ],
+      "citadas": [
+        "pagamento#cartao-na-entrega"
+      ],
+      "similaridade": 0.8842
+    },
+    {
+      "id": "d16",
+      "pergunta": "Vocês têm estacionamento?",
+      "sem_resposta": true,
+      "sabe": false,
+      "motivo": "llm_nao_sabe",
+      "correta": true,
+      "resposta": "Não encontrei essa informação nos documentos do restaurante. Fale com a loja pelo WhatsApp.",
+      "contextos": [
+        "Alergias e contaminação cruzada. Todos os espetinhos são feitos na mesma churrasqueira, e as porções são preparadas na mesma cozinha. Por isso, não garantimos ausência de traços de leite, trigo ou carne. Quem tem alergia grave deve avisar no pedido.",
+        "Glúten. A farofa e o pão de alho levam trigo. Os espetinhos, a mandioca frita, o arroz e o vinagrete não têm trigo na receita, mas podem ter traços pela cozinha compartilhada.",
+        "Área de atendimento. Entregamos apenas nos bairros Centro, Jardim das Flores, Vila Nova, Parque Industrial e Morro Azul. Pedidos para outros bairros só podem ser retirados na loja.",
+        "Onde estamos. A loja fica na Rua das Acácias, 120, no bairro Centro. É uma loja de retirada e entrega: temos só duas mesas na calçada, sem reserva.",
+        "Retirada no balcão. Pedidos para retirar ficam prontos em cerca de 25 minutos. Avisamos pelo WhatsApp quando estiverem prontos.",
+        "Talheres e descartáveis. Talheres e guardanapos são enviados só se o cliente pedir, para reduzir o desperdício. Não há cobrança.",
+        "Contato. Os pedidos são feitos pelo WhatsApp (11) 90000-0000. Não atendemos pedidos por ligação telefônica.",
+        "Cartão na entrega. O entregador leva a maquininha. Parcelamos em até 2 vezes sem juros no crédito em compras acima de R$ 60,00."
+      ],
+      "ids_contexto": [
+        "alimentacao#alergias-e-contaminacao-cruzada",
+        "alimentacao#gluten",
+        "entrega#area-de-atendimento",
+        "funcionamento#onde-estamos",
+        "entrega#retirada-no-balcao",
+        "alimentacao#talheres-e-descartaveis",
+        "funcionamento#contato",
+        "pagamento#cartao-na-entrega"
+      ],
+      "citadas": [],
+      "similaridade": 0.8557
+    },
+    {
+      "id": "d17",
+      "pergunta": "Quem é o dono do restaurante?",
+      "sem_resposta": true,
+      "sabe": false,
+      "motivo": "llm_nao_sabe",
+      "correta": true,
+      "resposta": "Não encontrei essa informação nos documentos do restaurante. Fale com a loja pelo WhatsApp.",
+      "contextos": [
+        "Acompanhamentos do cardápio, do mais barato para o mais caro: Porção de vinagrete: R$ 5,00; Porção de farofa: R$ 6,00; Pão de alho: R$ 7,00; Porção de arroz: R$ 8,00; Porção de feijão: R$ 9,00; Porção de mandioca frita: R$ 14,00.",
+        "Bebidas do cardápio, do mais barato para o mais caro: Água sem gás: R$ 3,50; Guaraná lata: R$ 5,50; Coca-Cola lata: R$ 6,00; Suco de laranja: R$ 9,00; Coca-Cola 2L: R$ 14,00.",
+        "Talheres e descartáveis. Talheres e guardanapos são enviados só se o cliente pedir, para reduzir o desperdício. Não há cobrança.",
+        "Alergias e contaminação cruzada. Todos os espetinhos são feitos na mesma churrasqueira, e as porções são preparadas na mesma cozinha. Por isso, não garantimos ausência de traços de leite, trigo ou carne. Quem tem alergia grave deve avisar no pedido.",
+        "Espetinhos do cardápio, do mais barato para o mais caro: Espetinho de frango: R$ 8,00; Espetinho de linguiça: R$ 8,00; Espetinho de carne: R$ 9,00; Espetinho de coração: R$ 9,50; Espetinho de queijo coalho: R$ 10,00; Espetinho de picanha: R$ 16,00.",
+        "Glúten. A farofa e o pão de alho levam trigo. Os espetinhos, a mandioca frita, o arroz e o vinagrete não têm trigo na receita, mas podem ter traços pela cozinha compartilhada.",
+        "Porção de farofa: R$ 6,00. Farofa de mandioca com bacon e cebola. Serve 2 pessoas. Não é vegetariano. Alérgenos: trigo.",
+        "Porção de feijão: R$ 9,00. Feijão tropeiro com bacon e linguiça. Serve 2 pessoas. Não é vegetariano. Alérgenos: nenhum na receita."
+      ],
+      "ids_contexto": [
+        "cardapio#categoria-acompanhamentos",
+        "cardapio#categoria-bebidas",
+        "alimentacao#talheres-e-descartaveis",
+        "alimentacao#alergias-e-contaminacao-cruzada",
+        "cardapio#categoria-espetinhos",
+        "alimentacao#gluten",
+        "cardapio#porcao-farofa",
+        "cardapio#porcao-feijao"
+      ],
+      "citadas": [],
+      "similaridade": 0.8312
+    },
+    {
+      "id": "d18",
+      "pergunta": "Vocês têm vagas de emprego?",
+      "sem_resposta": true,
+      "sabe": false,
+      "motivo": "llm_nao_sabe",
+      "correta": true,
+      "resposta": "Não encontrei essa informação nos documentos do restaurante. Fale com a loja pelo WhatsApp.",
+      "contextos": [
+        "Acompanhamentos do cardápio, do mais barato para o mais caro: Porção de vinagrete: R$ 5,00; Porção de farofa: R$ 6,00; Pão de alho: R$ 7,00; Porção de arroz: R$ 8,00; Porção de feijão: R$ 9,00; Porção de mandioca frita: R$ 14,00.",
+        "Formas de pagamento. Aceitamos Pix, dinheiro, cartão de crédito e cartão de débito. Não aceitamos vale-refeição, vale-alimentação nem cheque.",
+        "Feriados. Abrimos em feriados que caem de terça a domingo, no horário normal. Fechamos nos dias 24, 25 e 31 de dezembro e em 1º de janeiro.",
+        "Alergias e contaminação cruzada. Todos os espetinhos são feitos na mesma churrasqueira, e as porções são preparadas na mesma cozinha. Por isso, não garantimos ausência de traços de leite, trigo ou carne. Quem tem alergia grave deve avisar no pedido.",
+        "Tempo de entrega. O tempo médio é de 40 a 60 minutos. Às sextas e aos sábados, pode chegar a 80 minutos.",
+        "Espetinhos do cardápio, do mais barato para o mais caro: Espetinho de frango: R$ 8,00; Espetinho de linguiça: R$ 8,00; Espetinho de carne: R$ 9,00; Espetinho de coração: R$ 9,50; Espetinho de queijo coalho: R$ 10,00; Espetinho de picanha: R$ 16,00.",
+        "Pedidos grandes. Para mais de 30 espetinhos, peça com pelo menos 24 horas de antecedência, com 50% do valor pago no Pix. Não fazemos serviço de churrasqueiro em eventos.",
+        "Cupons e fidelidade. Não temos programa de fidelidade. O cupom PRIMEIRA dá 10% de desconto no primeiro pedido, sem contar a taxa de entrega, e não vale junto com outras promoções."
+      ],
+      "ids_contexto": [
+        "cardapio#categoria-acompanhamentos",
+        "pagamento#formas-de-pagamento",
+        "funcionamento#feriados",
+        "alimentacao#alergias-e-contaminacao-cruzada",
+        "entrega#tempo-de-entrega",
+        "cardapio#categoria-espetinhos",
+        "alimentacao#pedidos-grandes",
+        "pagamento#cupons-e-fidelidade"
+      ],
+      "citadas": [],
+      "similaridade": 0.8425
+    },
+    {
+      "id": "d19",
+      "pergunta": "A carne é de boi criado no pasto?",
+      "sem_resposta": true,
+      "sabe": false,
+      "motivo": "llm_nao_sabe",
+      "correta": true,
+      "resposta": "Não encontrei essa informação nos documentos do restaurante. Fale com a loja pelo WhatsApp.",
+      "contextos": [
+        "Espetinho de carne: R$ 9,00. Alcatra em cubos, temperada com sal grosso e alho. 150 g. Não é vegetariano. Alérgenos: nenhum na receita.",
+        "Observações no pedido. Dá para pedir sem farofa, sem vinagrete, sem cebola e sem pimenta, e escolher o ponto da carne: mal passada, ao ponto ou bem passada. Não fazemos trocas de ingredientes dentro da receita.",
+        "Alergias e contaminação cruzada. Todos os espetinhos são feitos na mesma churrasqueira, e as porções são preparadas na mesma cozinha. Por isso, não garantimos ausência de traços de leite, trigo ou carne. Quem tem alergia grave deve avisar no pedido.",
+        "Opções vegetarianas. As opções vegetarianas são o espetinho de queijo coalho, a porção de vinagrete, o pão de alho, a mandioca frita e o arroz. Não temos prato vegano pensado para isso, mas a mandioca frita, o vinagrete e o arroz não levam ingrediente de origem animal.",
+        "Espetinhos do cardápio, do mais barato para o mais caro: Espetinho de frango: R$ 8,00; Espetinho de linguiça: R$ 8,00; Espetinho de carne: R$ 9,00; Espetinho de coração: R$ 9,50; Espetinho de queijo coalho: R$ 10,00; Espetinho de picanha: R$ 16,00.",
+        "Glúten. A farofa e o pão de alho levam trigo. Os espetinhos, a mandioca frita, o arroz e o vinagrete não têm trigo na receita, mas podem ter traços pela cozinha compartilhada.",
+        "Espetinho de frango: R$ 8,00. Sobrecoxa marinada no limão e na páprica. 150 g. Não é vegetariano. Alérgenos: nenhum na receita.",
+        "Onde estamos. A loja fica na Rua das Acácias, 120, no bairro Centro. É uma loja de retirada e entrega: temos só duas mesas na calçada, sem reserva."
+      ],
+      "ids_contexto": [
+        "cardapio#espetinho-carne",
+        "alimentacao#observacoes-no-pedido",
+        "alimentacao#alergias-e-contaminacao-cruzada",
+        "alimentacao#opcoes-vegetarianas",
+        "cardapio#categoria-espetinhos",
+        "alimentacao#gluten",
+        "cardapio#espetinho-frango",
+        "funcionamento#onde-estamos"
+      ],
+      "citadas": [],
+      "similaridade": 0.8321
+    },
+    {
+      "id": "d20",
+      "pergunta": "Qual a capital da França?",
+      "sem_resposta": true,
+      "sabe": false,
+      "motivo": "sem_trecho_relevante",
+      "correta": true,
+      "resposta": "Não encontrei essa informação nos documentos do restaurante. Fale com a loja pelo WhatsApp.",
+      "contextos": [
+        "Cupons e fidelidade. Não temos programa de fidelidade. O cupom PRIMEIRA dá 10% de desconto no primeiro pedido, sem contar a taxa de entrega, e não vale junto com outras promoções.",
+        "Onde estamos. A loja fica na Rua das Acácias, 120, no bairro Centro. É uma loja de retirada e entrega: temos só duas mesas na calçada, sem reserva.",
+        "Entrega grátis. A entrega é grátis em pedidos acima de R$ 80,00, sem contar a taxa, nos bairros Centro, Jardim das Flores e Vila Nova. Nos demais bairros, a taxa é sempre cobrada.",
+        "Taxas de entrega por bairro. A taxa depende do bairro. Centro: R$ 5,00. Jardim das Flores: R$ 7,00. Vila Nova: R$ 7,00. Parque Industrial: R$ 10,00. Morro Azul: R$ 12,00.",
+        "Cartão na entrega. O entregador leva a maquininha. Parcelamos em até 2 vezes sem juros no crédito em compras acima de R$ 60,00.",
+        "Cancelamento. O pedido pode ser cancelado sem custo até entrar em preparo. Depois disso, não há cancelamento, porque a comida é feita na hora.",
+        "Tempo de entrega. O tempo médio é de 40 a 60 minutos. Às sextas e aos sábados, pode chegar a 80 minutos.",
+        "Feriados. Abrimos em feriados que caem de terça a domingo, no horário normal. Fechamos nos dias 24, 25 e 31 de dezembro e em 1º de janeiro."
+      ],
+      "ids_contexto": [
+        "pagamento#cupons-e-fidelidade",
+        "funcionamento#onde-estamos",
+        "entrega#entrega-gratis",
+        "entrega#taxas-de-entrega-por-bairro",
+        "pagamento#cartao-na-entrega",
+        "trocas#cancelamento",
+        "entrega#tempo-de-entrega",
+        "funcionamento#feriados"
+      ],
+      "citadas": [],
+      "similaridade": 0.77
+    }
+  ]
+}

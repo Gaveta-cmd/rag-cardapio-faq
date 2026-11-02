@@ -37,7 +37,7 @@ def test_slug_sem_acento():
 
 def test_gabarito_so_cita_trechos_que_existem():
     ids = {t.id for t in carregar_trechos()}
-    perguntas = [json.loads(l) for l in (RAIZ / "avaliacao" / "perguntas.jsonl").read_text(encoding="utf-8").splitlines()]
+    perguntas = [json.loads(linha) for linha in (RAIZ / "avaliacao" / "perguntas.jsonl").read_text(encoding="utf-8").splitlines()]
     assert len({p["id"] for p in perguntas}) == len(perguntas)
     for p in perguntas:
         assert set(p["fontes"]) <= ids, p["id"]
@@ -54,6 +54,11 @@ def test_fusao_nao_perde_itens():
 
 def test_tokenizar_ignora_acento_e_pontuacao():
     assert tokenizar("Pão, de ALHO!") == ["pao", "de", "alho"]
+
+
+def test_tokenizar_junta_plural_simples():
+    assert tokenizar("segundas") == tokenizar("segunda")
+    assert tokenizar("gás") == ["gas"]
 
 
 @pytest.mark.parametrize("modo, primeiro", [("vetor", "entrega#taxas"), ("hibrida", "entrega#minimo")])
@@ -75,6 +80,11 @@ def test_responde_citando_fonte():
     r = responder("Quanto custa?", [TAXAS, MINIMO], resposta_fixa("A taxa é R$ 5,00 [entrega#taxas]."))
     assert r.sabe and r.motivo == "respondeu"
     assert [f.id for f in r.fontes] == ["entrega#taxas"]
+
+
+def test_aceita_varios_ids_no_mesmo_colchete():
+    r = responder("Quanto custa?", [TAXAS, MINIMO], resposta_fixa("R$ 5,00 e mínimo de R$ 25,00 [entrega#taxas, entrega#minimo]."))
+    assert r.sabe and {f.id for f in r.fontes} == {"entrega#taxas", "entrega#minimo"}
 
 
 def test_llm_que_nao_sabe_vira_nao_sei():
