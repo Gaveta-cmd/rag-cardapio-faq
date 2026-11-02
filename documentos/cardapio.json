@@ -1,0 +1,22 @@
+{
+  "restaurante": "Espetinho da Esquina (restaurante fictício, criado para este projeto)",
+  "itens": [
+    {"id": "espetinho-carne", "nome": "Espetinho de carne", "categoria": "espetinhos", "preco": 9.0, "descricao": "Alcatra em cubos, temperada com sal grosso e alho. 150 g.", "vegetariano": false, "alergenos": []},
+    {"id": "espetinho-frango", "nome": "Espetinho de frango", "categoria": "espetinhos", "preco": 8.0, "descricao": "Sobrecoxa marinada no limão e na páprica. 150 g.", "vegetariano": false, "alergenos": []},
+    {"id": "espetinho-linguica", "nome": "Espetinho de linguiça", "categoria": "espetinhos", "preco": 8.0, "descricao": "Linguiça toscana artesanal, levemente apimentada. 130 g.", "vegetariano": false, "alergenos": []},
+    {"id": "espetinho-coracao", "nome": "Espetinho de coração", "categoria": "espetinhos", "preco": 9.5, "descricao": "Coração de frango com alho e salsinha. 120 g.", "vegetariano": false, "alergenos": []},
+    {"id": "espetinho-queijo", "nome": "Espetinho de queijo coalho", "categoria": "espetinhos", "preco": 10.0, "descricao": "Queijo coalho grelhado, servido com melaço de cana. 100 g.", "vegetariano": true, "alergenos": ["leite"]},
+    {"id": "espetinho-picanha", "nome": "Espetinho de picanha", "categoria": "espetinhos", "preco": 16.0, "descricao": "Picanha em cubos, ponto da casa ao ponto para mal passado. 150 g. É o item mais caro do cardápio.", "vegetariano": false, "alergenos": []},
+    {"id": "porcao-farofa", "nome": "Porção de farofa", "categoria": "acompanhamentos", "preco": 6.0, "descricao": "Farofa de mandioca com bacon e cebola. Serve 2 pessoas.", "vegetariano": false, "alergenos": ["trigo"]},
+    {"id": "porcao-vinagrete", "nome": "Porção de vinagrete", "categoria": "acompanhamentos", "preco": 5.0, "descricao": "Tomate, cebola e pimentão no vinagre. Serve 2 pessoas.", "vegetariano": true, "alergenos": []},
+    {"id": "pao-alho", "nome": "Pão de alho", "categoria": "acompanhamentos", "preco": 7.0, "descricao": "Duas unidades de pão com creme de alho e queijo.", "vegetariano": true, "alergenos": ["trigo", "leite"]},
+    {"id": "mandioca-frita", "nome": "Porção de mandioca frita", "categoria": "acompanhamentos", "preco": 14.0, "descricao": "400 g de mandioca frita, crocante por fora. Frita em óleo separado dos empanados.", "vegetariano": true, "alergenos": []},
+    {"id": "porcao-arroz", "nome": "Porção de arroz", "categoria": "acompanhamentos", "preco": 8.0, "descricao": "Arroz branco soltinho. Serve 2 pessoas.", "vegetariano": true, "alergenos": []},
+    {"id": "porcao-feijao", "nome": "Porção de feijão", "categoria": "acompanhamentos", "preco": 9.0, "descricao": "Feijão tropeiro com bacon e linguiça. Serve 2 pessoas.", "vegetariano": false, "alergenos": []},
+    {"id": "coca-lata", "nome": "Coca-Cola lata", "categoria": "bebidas", "preco": 6.0, "descricao": "Lata de 350 ml.", "vegetariano": true, "alergenos": []},
+    {"id": "guarana-lata", "nome": "Guaraná lata", "categoria": "bebidas", "preco": 5.5, "descricao": "Lata de 350 ml.", "vegetariano": true, "alergenos": []},
+    {"id": "coca-2l", "nome": "Coca-Cola 2L", "categoria": "bebidas", "preco": 14.0, "descricao": "Garrafa de 2 litros.", "vegetariano": true, "alergenos": []},
+    {"id": "agua-sem-gas", "nome": "Água sem gás", "categoria": "bebidas", "preco": 3.5, "descricao": "Garrafa de 500 ml.", "vegetariano": true, "alergenos": []},
+    {"id": "suco-laranja", "nome": "Suco de laranja", "categoria": "bebidas", "preco": 9.0, "descricao": "Natural, feito na hora, 400 ml. Sem adição de açúcar.", "vegetariano": true, "alergenos": []}
+  ]
+}
