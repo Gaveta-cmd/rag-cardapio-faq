@@ -147,3 +147,8 @@ def test_api_recusa_pergunta_invalida(cliente, pergunta):
 
 def test_saude(cliente):
     assert cliente.get("/saude").json() == {"status": "ok"}
+
+
+def test_pagina_chama_a_api(cliente):
+    r = cliente.get("/")
+    assert r.status_code == 200 and "text/html" in r.headers["content-type"] and "/perguntar" in r.text

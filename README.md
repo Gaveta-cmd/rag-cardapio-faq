@@ -78,11 +78,11 @@ São 50 perguntas com gabarito, commitadas antes da primeira execução: 20 de d
 | Pasta/arquivo | Para quê |
 |---|---|
 | `documentos/` | Cardápio e regras do restaurante |
-| `rag/` | Trechos, embeddings, banco, busca, resposta e API |
+| `rag/` | Trechos, embeddings, banco, busca, resposta, API e tela de perguntas |
 | `supabase/migrations/` | Tabela, RLS e função de busca, que valem para Supabase e Docker |
 | `avaliacao/` | Perguntas, gabarito e medidas |
 | `outputs/resultados/` | Respostas e números de cada execução |
-| `tests/` | 25 testes, sem depender de banco, modelo ou API paga |
+| `tests/` | 26 testes, sem depender de banco, modelo ou API paga |
 | `.github/workflows/ci.yml` | Lint e testes a cada envio |
 
 ## Como rodar
@@ -95,7 +95,7 @@ docker compose up -d --build
 docker compose exec api python -m rag.indexar
 ```
 
-A API fica em `http://127.0.0.1:8000`, com a documentação em `/docs`.
+A tela de perguntas fica em `http://127.0.0.1:8000`, e a documentação da API, em `/docs`.
 
 Testes e lint, sem banco, modelo nem chave:
 

@@ -5,9 +5,11 @@ Uso: uvicorn rag.api:app --port 8000
 """
 import os
 from functools import lru_cache
+from pathlib import Path
 from typing import Callable
 
 from fastapi import Depends, FastAPI
+from fastapi.responses import HTMLResponse
 from pydantic import BaseModel, Field
 
 from rag import resposta as rsp
@@ -58,6 +60,11 @@ def responder_pergunta(pergunta: str, resultado: Resultado, chamar_llm: Callable
     if resultado.similaridade_maxima < limite or not resultado.trechos:
         return rsp.nao_sei("sem_trecho_relevante")
     return rsp.responder(pergunta, resultado.trechos, chamar_llm)
+
+
+@app.get("/", response_class=HTMLResponse, include_in_schema=False)
+def pagina() -> str:
+    return Path(__file__).with_name("pagina.html").read_text(encoding="utf-8")
 
 
 @app.get("/saude")
